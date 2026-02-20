@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nettoyage Toiture - COBAN FILS</title>
+    <link href="navbar.css" rel="stylesheet" />
+    <link href="footer.css" rel="stylesheet" />
+    <link href="services.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        .service-page-hero {
+            background: linear-gradient(rgba(10, 35, 66, 0.7), rgba(43, 61, 79, 0.85)), url('image/gallery_4.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar"></nav> <!-- Content will be synced later -->
+
+    <header class="services-premium-hero service-page-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content fade-in">
+            <h1 class="hero-main-title">Nettoyage Toiture</h1>
+            <p class="hero-subtitle">Prolongez la durée de vie de votre toit et redonnez-lui son aspect d'origine.</p>
+            <div class="hero-badges">
+                <div class="badge-item"><i class="fas fa-water"></i> Haute Pression Douce</div>
+                <div class="badge-item"><i class="fas fa-leaf"></i> Anti-Mousse Bio</div>
+                <div class="badge-item"><i class="fas fa-clock"></i> Résultat Durable</div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <section class="detailed-services">
+        <div class="detailed-container">
+            <div class="category-block fade-in">
+                <div class="service-detail">
+                    <div class="detail-content">
+                        <h3>Un toit propre pour une maison saine</h3>
+                        <p>Les mousses, lichens et algues qui s'accumulent sur votre toiture ne sont pas seulement
+                            inesthétiques. Ils retiennent l'humidité et rendent vos tuiles poreuses, ce qui peut mener à
+                            des infiltrations et des dégâts structurels coûteux.</p>
+
+                        <div style="margin-top: 30px;">
+                            <h4 style="color: #0A2342; margin-bottom: 15px;">Notre Expertise en Nettoyage :</h4>
+                            <p>Nous utilisons des méthodes adaptées à chaque type de support (terre cuite, ardoise,
+                                béton) pour éliminer les micro-organismes sans agresser vos tuiles.</p>
+                        </div>
+
+                        <ul class="detail-list">
+                            <li><strong>Démoussage :</strong> Élimination manuelle ou mécanique des grosses mousses
+                                avant traitement.</li>
+                            <li><strong>Nettoyage :</strong> Rinçage basse ou moyenne pression pour un nettoyage en
+                                profondeur.</li>
+                            <li><strong>Traitement Curatif :</strong> Pulvérisation d'un fongicide algicide pour tuer
+                                les racines microscopiques.</li>
+                            <li><strong>Entretien Gouttières :</strong> Nous vérifions et nettoyons vos descentes d'eau
+                                systématiquement.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estimation Section -->
+    <section class="estimation-section" id="estimation">
+        <div class="estimation-container fade-in">
+            <h2 class="estimation-title">Estimez votre nettoyage</h2>
+            <p class="estimation-subtitle">Obtenez un prix indicatif en quelques secondes.</p>
+            <div class="estimation-box">
+                <div class="est-progress">
+                    <div class="est-step active" data-step="1">1</div>
+                    <div class="est-line"></div>
+                    <div class="est-step" data-step="2">2</div>
+                    <div class="est-line"></div>
+                    <div class="est-step" data-step="3">3</div>
+                </div>
+                <div class="est-content active" id="est-step-1">
+                    <h3>Type de toiture</h3>
+                    <div class="est-options">
+                        <div class="est-option selected" onclick="selectType('toiture', this)">
+                            <i class="fas fa-broom"></i>
+                            <span>Nettoyage Toiture</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="est-content" id="est-step-2">
+                    <h3>Détails techniques</h3>
+                    <div class="est-form-group">
+                        <label>Surface de la toiture (m² env.)</label>
+                        <input id="est-surface" min="1" placeholder="Ex: 80" type="number" />
+                    </div>
+                    <div class="est-form-group">
+                        <label>État d'encrassement</label>
+                        <div class="est-state-options">
+                            <div class="est-state" onclick="selectState('bon', this)">Léger</div>
+                            <div class="est-state" onclick="selectState('moyen', this)">Modéré</div>
+                            <div class="est-state" onclick="selectState('mauvais', this)">Sévère</div>
+                        </div>
+                    </div>
+                    <button class="est-btn-next" onclick="calculateEstimation()">Calculer mon prix</button>
+                    <button class="est-btn-back" onclick="goToStep(1)">Retour</button>
+                </div>
+                <div class="est-content" id="est-step-3">
+                    <h3>Estimation estimée</h3>
+                    <div class="est-result-price">
+                        <span id="price-min">0</span>€ - <span id="price-max">0</span>€
+                    </div>
+                    <p class="est-disclaimer">*Prix TTC moyen incluant main d'œuvre et produits.</p>
+                    <a class="est-cta-final" href="contact.html">Demander un devis ferme</a>
+                    <button class="est-btn-back" onclick="goToStep(2)">Modifier</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        let estData = { type: 'toiture', surface: 0, state: '' };
+        function selectType(type, el) {
+            estData.type = type;
+            document.querySelectorAll('.est-option').forEach(e => e.classList.remove('selected'));
+            el.classList.add('selected');
+            setTimeout(() => goToStep(2), 300);
+        }
+        function selectState(state, el) {
+            estData.state = state;
+            document.querySelectorAll('.est-state').forEach(e => e.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+        function goToStep(step) {
+            document.querySelectorAll('.est-content').forEach(e => e.classList.remove('active'));
+            document.getElementById('est-step-' + step).classList.add('active');
+            document.querySelectorAll('.est-step').forEach((e, idx) => {
+                if (idx + 1 <= step) e.classList.add('active');
+                else e.classList.remove('active');
+            });
+        }
+        function calculateEstimation() {
+            estData.surface = document.getElementById('est-surface').value;
+            if (!estData.surface || !estData.state) { alert("Veuillez remplir les champs"); return; }
+            let surface = parseInt(estData.surface);
+            let pMin = 15, pMax = 22;
+            if (estData.state === 'moyen') { pMin *= 1.25; pMax *= 1.25; }
+            else if (estData.state === 'mauvais') { pMin *= 1.6; pMax *= 1.7; }
+            document.getElementById('price-min').innerText = Math.round(surface * pMin).toLocaleString();
+            document.getElementById('price-max').innerText = Math.round(surface * pMax).toLocaleString();
+            goToStep(3);
+        }
+
+        // Shared navbar/footer loading logic
+        $(function () {
+            $(".navbar").load("navbar.html", function () {
+                // Initialize navigation logic
+                const navToggle = document.getElementById('nav-toggle');
+                const navMenu = document.getElementById('nav-menu');
+                if (navToggle && navMenu) {
+                    navToggle.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        navMenu.classList.toggle('active');
+                        navToggle.classList.toggle('active');
+                    });
+
+                    // Mobile Dropdowns
+                    const dropdowns = document.querySelectorAll('.dropdown');
+                    dropdowns.forEach(dropdown => {
+                        const toggle = dropdown.querySelector('.dropdown-toggle');
+                        if (toggle) {
+                            toggle.addEventListener('click', (e) => {
+                                if (window.innerWidth <= 768) {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    dropdowns.forEach(d => { if (d !== dropdown) d.classList.remove('active'); });
+                                    dropdown.classList.toggle('active');
+                                }
+                            });
+                        }
+                    });
+
+                    // Close on link click
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.addEventListener('click', () => {
+                            if (!link.classList.contains('dropdown-toggle') || window.innerWidth > 768) {
+                                navMenu.classList.remove('active');
+                                navToggle.classList.remove('active');
+                            }
+                        });
+                    });
+
+                    // Close on outside click
+                    document.addEventListener('click', (e) => {
+                        if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                            navMenu.classList.remove('active');
+                            navToggle.classList.remove('active');
+                        }
+                    });
+                }
+            });
+            $(".footer").load("footer.html");
+        });
+
+        // Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in, .scale-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

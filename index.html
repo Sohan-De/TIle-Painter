@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <script>
+        var currentUrl = window.location.href;
+        var redirectUrl = currentUrl.replace(/index\.html$/, '').replace(/\/$/, '') + '/home.html';
+        window.location.replace(redirectUrl);
+    </script>
+    <title>Redirecting...</title>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>

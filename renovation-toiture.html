@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Rénovation Toiture - COBAN FILS</title>
+    <link href="navbar.css" rel="stylesheet" />
+    <link href="footer.css" rel="stylesheet" />
+    <link href="services.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        .service-page-hero {
+            background: linear-gradient(rgba(10, 35, 66, 0.75), rgba(0, 0, 0, 0.6)), url('image/gallery_5.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar"></nav>
+
+    <header class="services-premium-hero service-page-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content fade-in">
+            <h1 class="hero-main-title">Rénovation Toiture</h1>
+            <p class="hero-subtitle">Redonnez force et étanchéité à votre toit avec une rénovation experte.</p>
+            <div class="hero-badges">
+                <div class="badge-item"><i class="fas fa-shield-alt"></i> Protection Maximale</div>
+                <div class="badge-item"><i class="fas fa-tools"></i> Expertise Technique</div>
+                <div class="badge-item"><i class="fas fa-certificate"></i> Garantie 10 Ans</div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <section class="detailed-services">
+        <div class="detailed-container">
+            <div class="category-block fade-in">
+                <div class="service-detail">
+                    <div class="detail-content">
+                        <h3>Une seconde jeunesse pour votre couverture</h3>
+                        <p>Pluie, vent, neige : votre toit est la première ligne de défense de votre maison. Avec le
+                            temps, les matériaux se dégradent et l'étanchéité n'est plus garantie. Une rénovation
+                            préventive coûte toujours moins cher qu'une réfection complète suite à un sinistre.</p>
+
+                        <div style="margin-top: 30px;">
+                            <h4 style="color: #0A2342; margin-bottom: 15px;">Nos Interventions :</h4>
+                            <p>Nous analysons l'état de votre charpente et de votre couverture pour proposer la solution
+                                la plus durable.</p>
+                        </div>
+
+                        <ul class="detail-list">
+                            <li><strong>Remplacement de Tuiles :</strong> Changement des éléments cassés, fissurés ou
+                                gélifs.</li>
+                            <li><strong>Réfection Faîtage :</strong> Étanchéité des sommets de toiture au mortier ou
+                                closoir.</li>
+                            <li><strong>Zinguerie :</strong> Révision des entourages de cheminées, noues et solins.</li>
+                            <li><strong>Traitement Charpente :</strong> Prévention contre les insectes et champignons si
+                                nécessaire.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estimation Section -->
+    <section class="estimation-section" id="estimation">
+        <div class="estimation-container fade-in">
+            <h2 class="estimation-title">Chiffrez votre rénovation</h2>
+            <p class="estimation-subtitle">Estimation rapide basée sur la complexité de votre toit.</p>
+            <div class="estimation-box">
+                <div class="est-progress">
+                    <div class="est-step active" data-step="1">1</div>
+                    <div class="est-line"></div>
+                    <div class="est-step" data-step="2">2</div>
+                    <div class="est-line"></div>
+                    <div class="est-step" data-step="3">3</div>
+                </div>
+                <div class="est-content active" id="est-step-1">
+                    <h3>Projet de rénovation</h3>
+                    <div class="est-options">
+                        <div class="est-option selected" onclick="selectType('toiture', this)">
+                            <i class="fas fa-hammer"></i>
+                            <span>Rénovation Toiture</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="est-content" id="est-step-2">
+                    <h3>Infos Techniques</h3>
+                    <div class="est-form-group">
+                        <label>Surface estimée (m²)</label>
+                        <input id="est-surface" min="1" placeholder="Ex: 100" type="number" />
+                    </div>
+                    <div class="est-form-group">
+                        <label>Complexité / État</label>
+                        <div class="est-state-options">
+                            <div class="est-state" onclick="selectState('bon', this)">Simple</div>
+                            <div class="est-state" onclick="selectState('moyen', this)">Partielle</div>
+                            <div class="est-state" onclick="selectState('mauvais', this)">Globale</div>
+                        </div>
+                    </div>
+                    <button class="est-btn-next" onclick="calculateEstimation()">Voir l'estimation</button>
+                    <button class="est-btn-back" onclick="goToStep(1)">Retour</button>
+                </div>
+                <div class="est-content" id="est-step-3">
+                    <h3>Votre Budget Indicatif</h3>
+                    <div class="est-result-price">
+                        <span id="price-min">0</span>€ - <span id="price-max">0</span>€
+                    </div>
+                    <p class="est-disclaimer">*Estimation variable selon les matériaux choisis.</p>
+                    <a class="est-cta-final" href="contact.html">Demander une visite gratuite</a>
+                    <button class="est-btn-back" onclick="goToStep(2)">Modifier</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        let estData = { type: 'toiture', surface: 0, state: '' };
+        function selectType(type, el) {
+            estData.type = type;
+            document.querySelectorAll('.est-option').forEach(e => e.classList.remove('selected'));
+            el.classList.add('selected');
+            setTimeout(() => goToStep(2), 300);
+        }
+        function selectState(state, el) {
+            estData.state = state;
+            document.querySelectorAll('.est-state').forEach(e => e.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+        function goToStep(step) {
+            document.querySelectorAll('.est-content').forEach(e => e.classList.remove('active'));
+            document.getElementById('est-step-' + step).classList.add('active');
+            document.querySelectorAll('.est-step').forEach((e, idx) => {
+                if (idx + 1 <= step) e.classList.add('active');
+                else e.classList.remove('active');
+            });
+        }
+        function calculateEstimation() {
+            estData.surface = document.getElementById('est-surface').value;
+            if (!estData.surface || !estData.state) { alert("Détails requis"); return; }
+            let surface = parseInt(estData.surface);
+            let pMin = 45, pMax = 75;
+            if (estData.state === 'moyen') { pMin *= 1.4; pMax *= 1.6; }
+            else if (estData.state === 'mauvais') { pMin *= 2.2; pMax *= 2.8; }
+            document.getElementById('price-min').innerText = Math.round(surface * pMin).toLocaleString();
+            document.getElementById('price-max').innerText = Math.round(surface * pMax).toLocaleString();
+            goToStep(3);
+        }
+
+        $(function () {
+            $(".navbar").load("navbar.html", function () { // Initialize navigation logic
+                const navToggle = document.getElementById('nav-toggle');
+                const navMenu = document.getElementById('nav-menu');
+                if (navToggle && navMenu) {
+                    navToggle.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        navMenu.classList.toggle('active');
+                        navToggle.classList.toggle('active');
+                    });
+
+                    // Mobile Dropdowns
+                    const dropdowns = document.querySelectorAll('.dropdown');
+                    dropdowns.forEach(dropdown => {
+                        const toggle = dropdown.querySelector('.dropdown-toggle');
+                        if (toggle) {
+                            toggle.addEventListener('click', (e) => {
+                                if (window.innerWidth <= 768) {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    dropdowns.forEach(d => { if (d !== dropdown) d.classList.remove('active'); });
+                                    dropdown.classList.toggle('active');
+                                }
+                            });
+                        }
+                    });
+
+                    // Close on link click
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.addEventListener('click', () => {
+                            if (!link.classList.contains('dropdown-toggle') || window.innerWidth > 768) {
+                                navMenu.classList.remove('active');
+                                navToggle.classList.remove('active');
+                            }
+                        });
+                    });
+
+                    // Close on outside click
+                    document.addEventListener('click', (e) => {
+                        if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                            navMenu.classList.remove('active');
+                            navToggle.classList.remove('active');
+                        }
+                    });
+                }
+            });
+            $(".footer").load("footer.html");
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in, .scale-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
