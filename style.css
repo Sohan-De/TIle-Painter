@@ -1171,107 +1171,156 @@ img {
     }
 }
 
-/* Split Hero Section */
-.split-hero {
-    display: flex;
+/* Slider Hero Section - Premium Design */
+.hero-slider {
+    position: relative;
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    position: relative;
-    background: #05162B;
-}
-
-.split-side {
-    position: relative;
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
-    transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
-    cursor: pointer;
-    overflow: hidden;
-    padding-top: 80px;
-    /* Offset for fixed navbar */
+    background: #05162B;
 }
 
-.split-side::before {
-    content: '';
+.hero-slider-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-slide {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(5, 22, 43, 0.2), rgba(5, 22, 43, 0.7));
-    z-index: 1;
-    transition: opacity 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
 
-.split-side:hover {
-    flex: 1.4;
+.hero-slide.active {
+    opacity: 1;
 }
 
-.split-side:hover::before {
-    opacity: 0.4;
+.hero-slide:nth-child(1) {
+    background-image: url('image/hero.jpg');
 }
 
-.split-side:hover .split-title {
-    transform: scale(1.05);
+.hero-slide:nth-child(2) {
+    background-image: url('image/Hero2.webp');
 }
 
-.split-side:hover .split-btn {
+.hero-dots {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    z-index: 20;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
     background: #FF6600;
-    color: white;
     border-color: #FF6600;
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
 }
 
-.split-content {
+.dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.hero-slider-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(5, 22, 43, 0.4), rgba(5, 22, 43, 0.7));
+    z-index: 2;
+}
+
+.hero-slider-content {
     position: relative;
     z-index: 10;
     text-align: center;
     color: white;
-    padding: 0 40px;
-    max-width: 500px;
-    transform: translateY(0);
-    transition: transform 0.5s ease;
+    max-width: 900px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.split-tag {
+.hero-slider-tag {
     display: inline-block;
-    padding: 6px 18px;
-    background: rgba(255, 102, 0, 0.9);
+    padding: 8px 24px;
+    background: #FF6600;
     color: white;
     border-radius: 50px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 700;
     margin-bottom: 25px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+    letter-spacing: 3px;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
 }
 
-.split-title {
-    font-size: 3.5rem;
+.hero-slider-title {
+    font-size: 4rem;
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     line-height: 1.1;
     text-transform: uppercase;
     letter-spacing: -2px;
-    transition: transform 0.5s ease;
-    white-space: nowrap;
 }
 
-.split-desc {
-    font-size: 1.2rem;
-    margin-bottom: 35px;
-    opacity: 0.9;
-    line-height: 1.6;
-    font-weight: 300;
+.hero-slider-title span {
+    color: #FF6600;
 }
 
-.split-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 16px 35px;
+.hero-slider-desc {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.hero-slider-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary {
+    padding: 18px 40px;
+    background: #FF6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 102, 0, 0.2);
+}
+
+.btn-secondary {
+    padding: 18px 40px;
     background: transparent;
     color: white;
     text-decoration: none;
@@ -1279,46 +1328,61 @@ img {
     font-weight: 700;
     font-size: 1rem;
     border: 2px solid rgba(255, 255, 255, 0.4);
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.3s ease;
 }
 
-/* Mobile responsive */
+.btn-primary:hover {
+    background: #e65c00;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 102, 0, 0.3);
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #05162B;
+    border-color: white;
+    transform: translateY(-3px);
+}
+
 @media (max-width: 992px) {
-    .split-title {
-        font-size: 2.8rem;
+    .hero-slider-title {
+        font-size: 3rem;
     }
 }
 
 @media (max-width: 768px) {
-    .split-hero {
+    .hero-slider-content {
+        padding: 50px 20px 30px;
+        /* Increased top padding */
+        margin: 0 20px;
+        background: none;
+        backdrop-filter: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .hero-slider-tag {
+        margin-top: 20px;
+        /* Added extra top margin for the tag */
+    }
+
+    .hero-slider-title {
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-slider-desc {
+        font-size: 1.1rem;
+    }
+
+    .hero-slider-btns {
         flex-direction: column;
-        height: auto;
-        /* Allow the content to define the height */
-        min-height: 100vh;
+        gap: 15px;
     }
 
-    .split-side {
-        flex: none;
+    .btn-primary,
+    .btn-secondary {
         width: 100%;
-        min-height: 60vh;
-        /* Fixed comfortable height for each part */
-        padding-top: 140px;
-        /* Adjusted padding to save space */
-        padding-bottom: 60px;
-    }
-
-    .split-title {
-        font-size: 1.8rem;
-        /* Smaller title to ensure 1-line on small screens */
-        white-space: normal;
-    }
-
-    .split-desc {
-        font-size: 1rem;
-        margin-bottom: 25px;
-    }
-
-    .split-content {
-        padding: 0 20px;
+        text-align: center;
     }
 }

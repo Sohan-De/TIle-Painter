@@ -7,7 +7,9 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"
         name="viewport" />
     <meta content="noindex, nofollow" name="robots" />
-    <title>Hero Section</title>
+    <title>Artisan Peintre & Couvreur à Revigny-sur-Ornain | COBAN FILS</title>
+    <meta name="description"
+        content="COBAN FILS, votre entreprise de confiance pour la peinture intérieure, le ravalement de façade et l'entretien de toiture à Revigny-sur-Ornain. Plus de 20 ans d'expertise au service de votre habitat.">
     <link href="navbar.css" rel="stylesheet" />
     <link href="footer.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
@@ -15,76 +17,86 @@
     <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-<div class="nav-container">
-    <div class="nav-logo">
-        <a class="logo-link" href="index.html" id="logo_text">COBAN FILS - Peinture &amp; Toiture</a>
-    </div>
-    <div class="nav-toggle" id="nav-toggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a class="logo-link" href="index.html" id="logo_text">COBAN FILS - Peinture &amp; Toiture</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
 
-    <ul class="nav-menu" id="nav-menu">
-        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-        <li class="nav-item dropdown">
-            <span class="nav-link dropdown-toggle">Peinture <i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <li><a href="peinture-interieure.html">Peinture Intérieure</a></li>
-                <li><a href="peinture-exterieure.html">Peinture Extérieure</a></li>
-                <li><a href="ravalement-facade.html">Ravalement Façade</a></li>
-                <li><a href="peinture-decorative.html">Peinture Décorative</a></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle">Peinture <i class="fas fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="peinture-interieure.html">Peinture Intérieure</a></li>
+                        <li><a href="peinture-exterieure.html">Peinture Extérieure</a></li>
+                        <li><a href="ravalement-facade.html">Ravalement Façade</a></li>
+                        <li><a href="peinture-decorative.html">Peinture Décorative</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle">Toiture <i class="fas fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="nettoyage-toiture.html">Nettoyage Toiture</a></li>
+                        <li><a href="renovation-toiture.html">Rénovation Toiture</a></li>
+                        <li><a href="hydrofuge-toiture.html">Hydrofuge Toiture</a></li>
+                        <li><a href="pose-tuiles.html">Pose de Tuiles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle">Zones d'intervention <i
+                            class="fas fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="peintre-revigny-sur-ornain.html">Revigny sur Ornain</a></li>
+                        <li><a href="peintre-bar-le-duc.html">Bar-le-Duc</a></li>
+                        <li><a href="peintre-vitry-le-francois.html">Vitry-le-François</a></li>
+                        <li><a href="peintre-saint-dizier.html">Saint-Dizier</a></li>
+                        <li><a href="peintre-falons-en-champagne.html">Châlons-en-Champagne</a></li>
+                        <li><a href="peintre-verdun.html">Verdun</a></li>
+                        <li><a href="peintre-ligny-en-barrois.html">Ligny-en-Barrois</a></li>
+                        <li><a href="peintre-commercy.html">Commercy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
-        </li>
-        <li class="nav-item dropdown">
-            <span class="nav-link dropdown-toggle">Toiture <i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <li><a href="nettoyage-toiture.html">Nettoyage Toiture</a></li>
-                <li><a href="renovation-toiture.html">Rénovation Toiture</a></li>
-                <li><a href="hydrofuge-toiture.html">Hydrofuge Toiture</a></li>
-                <li><a href="pose-tuiles.html">Pose de Tuiles</a></li>
-            </ul>
-        </li>
-        <li class="nav-item dropdown">
-            <span class="nav-link dropdown-toggle">Zones d'intervention <i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <li><a href="peintre-revigny-sur-ornain.html">Revigny sur Ornain</a></li>
-                <li><a href="peintre-bar-le-duc.html">Bar-le-Duc</a></li>
-                <li><a href="peintre-vitry-le-francois.html">Vitry-le-François</a></li>
-                <li><a href="peintre-saint-dizier.html">Saint-Dizier</a></li>
-                <li><a href="peintre-falons-en-champagne.html">Châlons-en-Champagne</a></li>
-                <li><a href="peintre-verdun.html">Verdun</a></li>
-                <li><a href="peintre-ligny-en-barrois.html">Ligny-en-Barrois</a></li>
-                <li><a href="peintre-commercy.html">Commercy</a></li>
-            </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-    </ul>
-</div></nav>
-    <section class="split-hero" id="hero-section">
-        <div class="split-side painting" onclick="window.location.href='peinture-interieure.html'"
-            style="background-image: url('image/hero.jpg');">
-            <div class="split-content fade-in">
-                <span class="split-tag">Expertise</span>
-                <h1 class="split-title">Peinture Déco</h1>
-                <p class="split-desc">Redonnez vie à vos intérieurs et façades avec des finitions d'exception.</p>
-                <a class="split-btn" href="peinture-interieure.html">Explorer <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </nav>
+
+    <section class="hero-slider" id="hero-section">
+        <div class="hero-slider-bg">
+            <div class="hero-slide"></div>
+            <div class="hero-slide"></div>
+        </div>
+        <div class="hero-slider-overlay"></div>
+        <div class="hero-slider-content fade-in">
+            <span class="hero-slider-tag">Artisan Qualifié</span>
+            <h1 class="hero-slider-title">Votre Expert en <span>Peinture & Toiture</span></h1>
+            <p class="hero-slider-desc">COBAN FILS sublime vos intérieurs et protège votre toiture avec un savoir-faire
+                artisanal d'exception. Ravalement de façade, décoration et entretien durable.</p>
+            <div class="hero-slider-btns">
+                <a class="btn-primary" href="contact.html">Demander un Devis Gratuit</a>
             </div>
         </div>
-        <div class="split-side roofing" onclick="window.location.href='nettoyage-toiture.html'"
-            style="background-image: url('image/gallery_3.jpg');">
-            <div class="split-content fade-in">
-                <span class="split-tag">Protection</span>
-                <h1 class="split-title">Toiture Pro</h1>
-                <p class="split-desc">De l'entretien à la rénovation complète, nous protégeons votre patrimoine.</p>
-                <a class="split-btn" href="nettoyage-toiture.html">Découvrir <i class="fas fa-arrow-right"></i></a>
-            </div>
+        <div class="hero-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
         </div>
     </section>
     <section class="about-section">
@@ -1104,6 +1116,50 @@
             }
         }
     </style>
+    <script>
+        // Hero Slider Logic
+        (function () {
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.dot');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                slides.forEach(s => s.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                let next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide();
+                slideInterval = setInterval(nextSlide, 3000); // 3 seconds per slide
+            }
+
+            function stopAutoSlide() {
+                clearInterval(slideInterval);
+            }
+
+            // Dots click events
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                    startAutoSlide(); // Restart interval on user click
+                });
+            });
+
+            // Initialize
+            showSlide(0);
+            startAutoSlide();
+        })();
+    </script>
 </body>
 
 </html>
