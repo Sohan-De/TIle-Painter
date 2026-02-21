@@ -1171,148 +1171,154 @@ img {
     }
 }
 
-/* Hero Slider Section */
-.hero-slider {
-    position: relative;
+/* Split Hero Section */
+.split-hero {
+    display: flex;
     height: 100vh;
-    /* Restored to full height as requested */
-    min-height: 600px;
     width: 100%;
     overflow: hidden;
+    position: relative;
+    background: #05162B;
+}
+
+.split-side {
+    position: relative;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
-    /* More space to push content below the fixed navbar */
-}
-
-.slider-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    overflow: hidden;
+    padding-top: 80px;
+    /* Offset for fixed navbar */
+}
+
+.split-side::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(5, 22, 43, 0.2), rgba(5, 22, 43, 0.7));
     z-index: 1;
+    transition: opacity 0.5s ease;
 }
 
-.slide.active {
-    opacity: 1;
-    z-index: 2;
+.split-side:hover {
+    flex: 1.4;
 }
 
-.hero-content {
-    animation: fadeInUp 0.8s ease-out backwards;
-    /* Use backwards to hide before animation */
+.split-side:hover::before {
+    opacity: 0.4;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.split-side:hover .split-title {
+    transform: scale(1.05);
 }
 
-.hero-overlay {
+.split-side:hover .split-btn {
+    background: #FF6600;
+    color: white;
+    border-color: #FF6600;
+}
+
+.split-content {
     position: relative;
     z-index: 10;
     text-align: center;
     color: white;
-    padding: 20px;
-    max-width: 900px;
+    padding: 0 40px;
+    max-width: 500px;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
 }
 
-.hero-title {
+.split-tag {
+    display: inline-block;
+    padding: 6px 18px;
+    background: rgba(255, 102, 0, 0.9);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+}
+
+.split-title {
     font-size: 3.5rem;
-    /* Slightly smaller for better fit */
-    font-weight: 800;
+    font-weight: 900;
     margin-bottom: 20px;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    letter-spacing: -1px;
     line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    transition: transform 0.5s ease;
+    white-space: nowrap;
 }
 
-.hero-description {
-    font-size: 1.3rem;
+.split-desc {
+    font-size: 1.2rem;
     margin-bottom: 35px;
-    opacity: 0.95;
-    line-height: 1.5;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    opacity: 0.9;
+    line-height: 1.6;
+    font-weight: 300;
 }
 
-.hero-btns {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.hero-btn {
-    padding: 15px 40px;
+.split-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 35px;
+    background: transparent;
+    color: white;
+    text-decoration: none;
     border-radius: 50px;
     font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.hero-btn.primary {
-    background: #FF6600;
-    color: white;
-}
-
-.hero-btn.secondary {
-    background: white;
-    color: #0A2342;
-}
-
-.hero-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+/* Mobile responsive */
+@media (max-width: 992px) {
+    .split-title {
+        font-size: 2.8rem;
+    }
 }
 
 @media (max-width: 768px) {
-    .hero-slider {
-        height: 70vh;
+    .split-hero {
+        flex-direction: column;
+        height: auto;
+        /* Allow the content to define the height */
+        min-height: 100vh;
     }
 
-    .hero-title {
-        font-size: 2.2rem;
+    .split-side {
+        flex: none;
+        width: 100%;
+        min-height: 60vh;
+        /* Fixed comfortable height for each part */
+        padding-top: 140px;
+        /* Adjusted padding to save space */
+        padding-bottom: 60px;
     }
 
-    .hero-description {
+    .split-title {
+        font-size: 1.8rem;
+        /* Smaller title to ensure 1-line on small screens */
+        white-space: normal;
+    }
+
+    .split-desc {
         font-size: 1rem;
         margin-bottom: 25px;
     }
 
-    .hero-btns {
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
-    }
-
-    .hero-btn {
-        width: 100%;
-        max-width: 250px;
-        padding: 12px 25px;
-        font-size: 1rem;
+    .split-content {
+        padding: 0 20px;
     }
 }

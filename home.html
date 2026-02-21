@@ -72,24 +72,23 @@
 
         </div>
     </nav>
-    <section class="hero-slider" id="hero-section">
-        <div class="slider-container">
-            <div class="slide active"
-                style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/hero.jpg');">
-            </div>
-            <div class="slide"
-                style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/gallery_3.jpg');">
+    <section class="split-hero" id="hero-section">
+        <div class="split-side painting" onclick="window.location.href='peinture-interieure.html'"
+            style="background-image: url('image/hero.jpg');">
+            <div class="split-content fade-in">
+                <span class="split-tag">Expertise</span>
+                <h1 class="split-title">Peinture Déco</h1>
+                <p class="split-desc">Redonnez vie à vos intérieurs et façades avec des finitions d'exception.</p>
+                <a class="split-btn" href="peinture-interieure.html">Explorer <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-        <div class="hero-overlay">
-            <div class="hero-content fade-in">
-                <h1 class="hero-title">Expert en Peinture & Toiture</h1>
-                <p class="hero-description">Solutions professionnelles pour l'embellissement et la protection de votre
-                    habitat.</p>
-                <div class="hero-btns">
-                    <a class="hero-btn primary" href="services.html">Nos Services</a>
-                    <a class="hero-btn secondary" href="contact.html">Devis Gratuit</a>
-                </div>
+        <div class="split-side roofing" onclick="window.location.href='nettoyage-toiture.html'"
+            style="background-image: url('image/gallery_3.jpg');">
+            <div class="split-content fade-in">
+                <span class="split-tag">Protection</span>
+                <h1 class="split-title">Toiture Pro</h1>
+                <p class="split-desc">De l'entretien à la rénovation complète, nous protégeons votre patrimoine.</p>
+                <a class="split-btn" href="nettoyage-toiture.html">Découvrir <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -925,20 +924,7 @@
                 observer.observe(el);
             });
 
-            // Hero Slider Logic
-            const slides = document.querySelectorAll('.slide');
-            let currentSlide = 0;
 
-            function nextSlide() {
-                if (slides.length < 2) return;
-                slides[currentSlide].classList.remove('active');
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].classList.add('active');
-            }
-
-            if (slides.length > 1) {
-                setInterval(nextSlide, 5000);
-            }
         });
 
         // Fix overflow issue after zoom/unzoom - Force recalculation
