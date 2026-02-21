@@ -3,18 +3,347 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Peinture Décorative - COBAN FILS</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"
+        name="viewport" />
+    <meta content="index, follow" name="robots" />
+    <title>Peinture Décorative | COBAN FILS - L'Art du Détail</title>
+    <meta name="description"
+        content="Apportez une touche d'exception à vos murs. Effets stucco, matières sablées et patines haut de gamme avec COBAN FILS.">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Stylesheets -->
     <link href="navbar.css" rel="stylesheet" />
     <link href="footer.css" rel="stylesheet" />
     <link href="services.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
     <style>
-        .service-page-hero {
-            background: linear-gradient(rgba(10, 35, 66, 0.8), rgba(10, 35, 66, 0.9)), url('image/gallery_6.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+        :root {
+            --primary: #FF6600;
+            --primary-dark: #cc5200;
+            --secondary: #0A2342;
+            --accent: #FF6600;
+            --font-main: 'Poppins', sans-serif;
+            --font-heading: 'Outfit', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: #ffffff;
+            color: var(--secondary);
+            overflow-x: hidden;
+        }
+
+        /* --- NEXT-GEN HERO --- */
+        .cool-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--secondary);
+            padding: 120px 5% 80px;
+            overflow: hidden;
+        }
+
+        .cool-hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 102, 0, 0.1) 0%, transparent 70%);
+            z-index: 1;
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text-content {
+            color: #fff;
+        }
+
+        .hero-label {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--primary);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .hero-title-big {
+            font-family: var(--font-heading);
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 800;
+            line-height: 0.95;
+            margin-bottom: 30px;
+            letter-spacing: -3px;
+        }
+
+        .hero-title-big span {
+            display: block;
+            background: linear-gradient(90deg, #fff, #888);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-title-big em {
+            font-style: normal;
+            color: var(--primary);
+        }
+
+        .hero-desc-cool {
+            font-size: 1.25rem;
+            opacity: 0.7;
+            max-width: 500px;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-modern {
+            padding: 20px 40px;
+            border-radius: 100px;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: var(--font-heading);
+            transition: 0.4s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary-cool {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .btn-primary-cool:hover {
+            transform: scale(1.05);
+            background: #fff;
+            color: var(--secondary);
+            box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
+        }
+
+        .btn-outline-cool {
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .btn-outline-cool:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #fff;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .main-hero-img {
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+            border-radius: 40px;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
+            transform: perspective(1000px) rotateY(-5deg);
+        }
+
+        .floating-ui {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 20px;
+            color: #fff;
+            bottom: -30px;
+            left: -30px;
+            max-width: 250px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .floating-ui i {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .floating-ui h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .floating-ui p {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* --- EXPERIENCE SECTION --- */
+        .experience-section {
+            padding: 150px 5%;
+        }
+
+        .section-header-cool {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .section-header-cool h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            color: var(--secondary);
+        }
+
+        .modern-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .feature-card-cool {
+            padding: 60px 40px;
+            border-radius: 40px;
+            background: #fff;
+            border: 1px solid #f0f0f0;
+            transition: 0.5s;
+            text-align: center;
+        }
+
+        .feature-card-cool:hover {
+            border-color: var(--primary);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.05);
+            transform: translateY(-20px);
+        }
+
+        .card-icon-cool {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 40px;
+            font-size: 2.5rem;
+            color: var(--primary);
+            transition: 0.5s;
+        }
+
+        .feature-card-cool:hover .card-icon-cool {
+            background: var(--primary);
+            color: #fff;
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        /* --- PROCESS SECTION --- */
+        .process-section {
+            background: var(--secondary);
+            color: #fff;
+            padding: 150px 5%;
+        }
+
+        .process-row {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 100px;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .step-num {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(255, 102, 0, 0.2);
+            line-height: 1;
+        }
+
+        .step-info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .step-info p {
+            opacity: 0.6;
+            font-size: 1.1rem;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 1024px) {
+            .hero-layout {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-desc-cool {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-cta-group {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .modern-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-row {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -27,9 +356,7 @@
                 <a class="logo-link" href="index.html" id="logo_text">COBAN FILS - Peinture &amp; Toiture</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </div>
 
             <ul class="nav-menu" id="nav-menu">
@@ -72,268 +399,294 @@
         </div>
     </nav>
 
-    <header class="services-premium-hero service-page-hero">
-        <div class="hero-bg-overlay"></div>
-        <div class="hero-content fade-in">
-            <h1 class="hero-main-title">Peinture Décorative</h1>
-            <p class="hero-subtitle">Apportez une touche d'exception et de texture à vos murs.</p>
-            <div class="hero-badges">
-                <div class="badge-item"><i class="fas fa-palette"></i> Effets Uniques</div>
-                <div class="badge-item"><i class="fas fa-star"></i> Finitions Prestige</div>
-                <div class="badge-item"><i class="fas fa-wand-magic-sparkles"></i> Design Personnalisé</div>
+    <!-- COOL HERO -->
+    <section class="cool-hero">
+        <div class="hero-layout">
+            <div class="hero-text-content fade-in">
+                <span class="hero-label">Design & Matière</span>
+                <h1 class="hero-title-big">
+                    <span>L'ART DU</span>
+                    <em>DÉTAIL.</em>
+                </h1>
+                <p class="hero-desc-cool">Sublimez vos murs avec des textures uniques et des finitions prestigieuses qui
+                    transforment votre intérieur en espace d'exception.</p>
+                <div class="hero-cta-group">
+                    <a href="contact.html" class="btn-modern btn-primary-cool">Devis Express</a>
+                    <a href="#progr" class="btn-modern btn-outline-cool">Nos Techniques</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-wave">
-            <svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                    class="shape-fill"></path>
-            </svg>
-        </div>
-    </header>
-
-    <section class="detailed-services">
-        <div class="detailed-container">
-            <div class="category-block fade-in">
-                <div class="service-detail">
-                    <div class="detail-content">
-                        <h3>L'art de la décoration murale</h3>
-                        <p>La peinture décorative transforme vos murs en véritables œuvres d'art. En jouant sur les
-                            textures, les reflets et les matières, nous créons des intérieurs uniques qui reflètent
-                            votre personnalité.</p>
-
-                        <div style="margin-top: 30px;">
-                            <h4 style="color: #0A2342; margin-bottom: 15px;">Nos Techniques Décoratives :</h4>
-                            <p>Nous maîtrisons les techniques traditionnelles et modernes pour des effets visuels
-                                saisissants.</p>
-                        </div>
-
-                        <ul class="detail-list">
-                            <li><strong>Stucco et Enduits à la Chaux :</strong> Pour un aspect minéral, lisse et
-                                brillant.</li>
-                            <li><strong>Peintures Sablées :</strong> Des reflets délicats et une texture granuleuse
-                                sophistiquée.</li>
-                            <li><strong>Effets Métallisés :</strong> Pour une touche contemporaine et des jeux de
-                                lumière.</li>
-                            <li><strong>Patine et Effet Vieilli :</strong> Idéal pour les rénovations de charme ou de
-                                style ancien.</li>
-                        </ul>
-                    </div>
+            <div class="hero-visual fade-in">
+                <img src="image/gallery_6.jpg" alt="Decorative Painting" class="main-hero-img">
+                <div class="floating-ui scale-in">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                    <h4>Effets Uniques</h4>
+                    <p>Stucco, chaux, sablé ou métallisé : des textures qui captent la lumière.</p>
                 </div>
             </div>
         </div>
-        <!-- Recent Works Section -->
-        <section class="recent-works-section">
-            <div class="section-header-centered fade-in">
-                <span class="section-label">Portfolio</span>
-                <h2 class="section-title">Nos Réalisations Récentes</h2>
-            </div>
-            <div class="works-grid">
-                <div class="work-card fade-in">
-                    <div class="work-img-box">
-                        <img src="image/gallery_6.jpg" alt="Effet Stucco">
-                    </div>
-                    <div class="work-info">
-                        <span class="work-category">Décoration</span>
-                        <h3 class="work-title">Effet Stucco Vénitien</h3>
-                    </div>
-                </div>
-                <div class="work-card fade-in">
-                    <div class="work-img-box">
-                        <img src="image/gallery_8.jpg" alt="Mur Sablé">
-                    </div>
-                    <div class="work-info">
-                        <span class="work-category">Décoration</span>
-                        <h3 class="work-title">Matière Sablée & Reflets</h3>
-                    </div>
-                </div>
-                <div class="work-card fade-in">
-                    <div class="work-img-box">
-                        <img src="image/gallery_9.jpg" alt="Patine Ancienne">
-                    </div>
-                    <div class="work-info">
-                        <span class="work-category">Décoration</span>
-                        <h3 class="work-title">Patine & Chaux Traditionnelle</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
+    </section>
 
-        <!-- Estimation Section -->
-        <section class="estimation-section" id="estimation">
-            <div class="estimation-container fade-in">
-                <h2 class="estimation-title">Estimez vos travaux</h2>
-                <p class="estimation-subtitle">Obtenez un chiffrage immédiat pour votre décoration murale haut de gamme.
-                </p>
-                <div class="estimation-box">
-                    <div class="est-progress">
-                        <div class="est-step active" data-step="1">1</div>
-                        <div class="est-line"></div>
-                        <div class="est-step" data-step="2">2</div>
-                        <div class="est-line"></div>
-                        <div class="est-step" data-step="3">3</div>
+    <!-- EXPERIENCE -->
+    <section class="experience-section">
+        <div class="section-header-cool fade-in">
+            <span class="hero-label" style="color: var(--secondary); opacity: 0.5;">L'exception murale</span>
+            <h2>Des Finitions <span>Prestige</span></h2>
+        </div>
+        <div class="modern-grid">
+            <div class="feature-card-cool fade-in">
+                <div class="card-icon-cool"><i class="fas fa-palette"></i></div>
+                <h3>Stucco & Chaux</h3>
+                <p>Retrouvez l'élégance des palais italiens avec nos enduits minéraux polis à la main.</p>
+            </div>
+            <div class="feature-card-cool fade-in">
+                <div class="card-icon-cool"><i class="fas fa-gem"></i></div>
+                <h3>Effets Sablés</h3>
+                <p>Une texture délicate et des reflets nacrés pour une ambiance chaleureuse et raffinée.</p>
+            </div>
+            <div class="feature-card-cool fade-in">
+                <div class="card-icon-cool"><i class="fas fa-bolt"></i></div>
+                <h3>Matières Métal</h3>
+                <p>Des jeux de lumière contemporains avec nos finitions aux reflets or, argent ou cuivre.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section" id="progr">
+        <div class="process-row">
+            <div class="process-steps">
+                <div class="step-item fade-in">
+                    <div class="step-num">01</div>
+                    <div class="step-info">
+                        <h3>Préparation Haute Précision</h3>
+                        <p>Le support doit être parfait. Nous réalisons un ratissage complet pour une planéité totale.
+                        </p>
                     </div>
-                    <div class="est-content active" id="est-step-1">
-                        <h3>Type de finition décorative</h3>
-                        <div class="est-options">
-                            <div class="est-option selected" onclick="selectType('deco', this)">
-                                <i class="fas fa-magic"></i>
-                                <span>Peinture Décorative</span>
-                            </div>
-                        </div>
+                </div>
+                <div class="step-item fade-in">
+                    <div class="step-num">02</div>
+                    <div class="step-info">
+                        <h3>Application de la Matière</h3>
+                        <p>Mise en œuvre artisanale à la spatule ou à la brosse selon l'effet désiré.</p>
                     </div>
-                    <div class="est-content" id="est-step-2">
-                        <h3>Détails du projet</h3>
-                        <div class="est-form-group">
-                            <label>Surface murale (m²)</label>
-                            <input id="est-surface" min="1" placeholder="Ex: 20" type="number" />
-                        </div>
-                        <div class="est-form-group">
-                            <label>Support actuel</label>
-                            <div class="est-state-options">
-                                <div class="est-state" onclick="selectState('bon', this)">Prêt à peindre</div>
-                                <div class="est-state" onclick="selectState('moyen', this)">À préparer</div>
-                            </div>
-                        </div>
-                        <button class="est-btn-next" onclick="calculateEstimation()">Voir l'estimation</button>
-                        <button class="est-btn-back" onclick="goToStep(1)">Retour</button>
-                    </div>
-                    <div class="est-content" id="est-step-3">
-                        <h3>Votre Estimation</h3>
-                        <div class="est-result-price">
-                            <span id="price-min">0</span>€ - <span id="price-max">0</span>€
-                        </div>
-                        <a class="est-cta-final" href="contact.html">Projet sur mesure ? Contactez-nous</a>
-                        <button class="est-btn-back" onclick="goToStep(2)">Modifier</button>
+                </div>
+                <div class="step-item fade-in">
+                    <div class="step-num">03</div>
+                    <div class="step-info">
+                        <h3>Lustrage & Protection</h3>
+                        <p>Phase finale de polissage ou application d'une cire protectrice pour sceller l'esthétique.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="process-visual fade-in">
+                <img src="image/gallery_8.jpg" alt="Work Process"
+                    style="width: 100%; border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer class="footer" id="footer-background">
-            <div class="footer-container">
-                <div class="footer-content">
-                    <div class="footer-contact">
-                        <h3 class="footer-title">Contact</h3>
-                        <p class="footer-subtitle">Pour toute demande de renseignement.</p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <h4 class="contact-label">Email</h4>
-                                <p class="contact-text"><a href="mailto:votre@email.com" id="email_address"
-                                        style="color: inherit; text-decoration: none;">votre@email.com</a></p>
-                            </div>
-                            <div class="contact-item">
-                                <h4 class="contact-label">Téléphone</h4>
-                                <p class="contact-text"><a href="tel:07 71 67 76 69" id="phone_number"
-                                        style="color: inherit; text-decoration: none;">07 71 67 76 69</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-form">
-                        <form class="footer-form-content">
-                            <div class="footer-form-group">
-                                <label class="footer-form-label" for="footer-name">Nom et prénom</label>
-                                <input class="footer-form-input" id="footer-name" name="fullname"
-                                    placeholder="Entrez votre nom complet" required="" type="text" />
-                            </div>
-                            <button class="footer-submit-button" id="footer-button" type="submit">Envoyer votre
-                                demande</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p class="copyright">© 2025. Tous droits réservés.</p>
+    <!-- PORTFOLIO -->
+    <section class="experience-section" style="padding-bottom: 0;">
+        <div class="section-header-cool fade-in">
+            <span class="hero-label" style="color: var(--secondary); opacity: 0.5;">Portfolio</span>
+            <h2>Réalisations <span>Récentes</span></h2>
+        </div>
+        <div class="modern-grid">
+            <div class="feature-card-cool fade-in"
+                style="padding: 0; overflow: hidden; height: 500px; position: relative; border: none;">
+                <img src="image/gallery_6.jpg" alt="Stucco"
+                    style="width: 100%; height: 100%; object-fit: cover; transition: 0.8s;">
+                <div
+                    style="position: absolute; bottom: 0; left: 0; right: 0; padding: 40px; background: linear-gradient(transparent, rgba(10, 35, 66, 0.9)); color: #fff; text-align: left;">
+                    <span
+                        style="color: var(--primary); font-family: var(--font-heading); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Stucco
+                        Vénitien</span>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-top: 5px;">Maison de Luxe
+                    </h3>
                 </div>
             </div>
-        </footer>
+            <div class="feature-card-cool fade-in"
+                style="padding: 0; overflow: hidden; height: 500px; position: relative; border: none;">
+                <img src="image/gallery_8.jpg" alt="Sand Effect"
+                    style="width: 100%; height: 100%; object-fit: cover; transition: 0.8s;">
+                <div
+                    style="position: absolute; bottom: 0; left: 0; right: 0; padding: 40px; background: linear-gradient(transparent, rgba(10, 35, 66, 0.9)); color: #fff; text-align: left;">
+                    <span
+                        style="color: var(--primary); font-family: var(--font-heading); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Matière
+                        Sablée</span>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-top: 5px;">Salon Contemporain
+                    </h3>
+                </div>
+            </div>
+            <div class="feature-card-cool fade-in"
+                style="padding: 0; overflow: hidden; height: 500px; position: relative; border: none;">
+                <img src="image/gallery_9.jpg" alt="Patine"
+                    style="width: 100%; height: 100%; object-fit: cover; transition: 0.8s;">
+                <div
+                    style="position: absolute; bottom: 0; left: 0; right: 0; padding: 40px; background: linear-gradient(transparent, rgba(10, 35, 66, 0.9)); color: #fff; text-align: left;">
+                    <span
+                        style="color: var(--primary); font-family: var(--font-heading); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Effet
+                        Vieilli</span>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-top: 5px;">Rénovation de
+                        Charme</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script>
-            let estData = { type: 'deco', surface: 0, state: '' };
-            function selectType(type, el) {
-                estData.type = type;
-                document.querySelectorAll('.est-option').forEach(e => e.classList.remove('selected'));
-                el.classList.add('selected');
-                setTimeout(() => goToStep(2), 300);
-            }
-            function selectState(state, el) {
-                estData.state = state;
-                document.querySelectorAll('.est-state').forEach(e => e.classList.remove('selected'));
-                el.classList.add('selected');
-            }
-            function goToStep(step) {
-                document.querySelectorAll('.est-content').forEach(e => e.classList.remove('active'));
-                document.getElementById('est-step-' + step).classList.add('active');
-                document.querySelectorAll('.est-step').forEach((e, idx) => {
-                    if (idx + 1 <= step) e.classList.add('active');
-                    else e.classList.remove('active');
-                });
-            }
-            function calculateEstimation() {
-                estData.surface = document.getElementById('est-surface').value;
-                if (!estData.surface || !estData.state) { alert("Détails requis"); return; }
-                let surface = parseInt(estData.surface);
-                let pMin = 35, pMax = 55; // Decorative effects are premium
-                if (estData.state === 'moyen') { pMin *= 1.3; pMax *= 1.3; }
-                document.getElementById('price-min').innerText = Math.round(surface * pMin).toLocaleString();
-                document.getElementById('price-max').innerText = Math.round(surface * pMax).toLocaleString();
-                goToStep(3);
-            }
+    <!-- CALCULATION BOX (STYLISH) -->
+    <section class="experience-section" style="background: var(--bg-light);" id="estimation">
+        <div class="section-header-cool fade-in">
+            <h2>Estimez votre <span>Projet</span></h2>
+        </div>
+        <div class="estimation-box fade-in"
+            style="background: #fff; max-width: 800px; margin: 0 auto; border-radius: 40px; padding: 60px; box-shadow: 0 40px 80px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
+            <div class="est-content active" id="est-step-1">
+                <h3
+                    style="font-family: var(--font-heading); font-weight: 800; font-size: 2rem; margin-bottom: 30px; text-align: center;">
+                    Configuration</h3>
+                <div style="display: flex; flex-direction: column; gap: 30px;">
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <label style="font-weight: 700; color: var(--secondary);">Surface Décorative (m²)</label>
+                        <input type="number" id="est-surface" placeholder="Ex: 15"
+                            style="width: 100%; padding: 20px; border-radius: 15px; border: 1px solid #eee; background: #f8f9fa; font-size: 1.1rem; outline: none; transition: 0.3s;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <label style="font-weight: 700; color: var(--secondary);">Complexité de l'effet</label>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+                            <button onclick="setSt('bon', this)"
+                                style="padding: 15px; border-radius: 12px; border: 1px solid #eee; background: #fff; cursor: pointer; font-weight: 600;">Sablé</button>
+                            <button onclick="setSt('moyen', this)"
+                                style="padding: 15px; border-radius: 12px; border: 1px solid #eee; background: #fff; cursor: pointer; font-weight: 600;">Stucco</button>
+                            <button onclick="setSt('mauvais', this)"
+                                style="padding: 15px; border-radius: 12px; border: 1px solid #eee; background: #fff; cursor: pointer; font-weight: 600;">Artistique</button>
+                        </div>
+                    </div>
+                    <button onclick="calc()"
+                        style="width: 100%; padding: 25px; border-radius: 20px; border: none; background: var(--secondary); color: #fff; font-size: 1.2rem; font-weight: 800; cursor: pointer; transition: 0.4s; margin-top: 20px;">Calculer
+                        l'Estimation</button>
+                </div>
+                <div id="res"
+                    style="display: none; margin-top: 50px; text-align: center; padding-top: 30px; border-top: 1px solid #eee;">
+                    <p style="font-size: 1rem; opacity: 0.6; margin-bottom: 10px;">Budget estimé</p>
+                    <h2 style="font-family: var(--font-heading); font-size: 3.5rem; color: var(--primary);"
+                        id="price-val">0€</h2>
+                    <p style="font-size: 0.9rem; opacity: 0.5; margin-top: 20px;">*TVA & fournitures incluses. Les
+                        effets décoratifs sont des prestations haute couture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer-background">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact</h3>
+                    <p class="footer-subtitle">Pour toute demande de renseignement.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h4 class="contact-label">Email</h4>
+                            <p class="contact-text"><a href="mailto:votre@email.com" id="email_address"
+                                    style="color: inherit; text-decoration: none;">votre@email.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h4 class="contact-label">Téléphone</h4>
+                            <p class="contact-text"><a href="tel:07 71 67 76 69" id="phone_number"
+                                    style="color: inherit; text-decoration: none;">07 71 67 76 69</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-form">
+                    <form class="footer-form-content">
+                        <div class="footer-form-group">
+                            <label class="footer-form-label" for="footer-name">Nom et prénom</label>
+                            <input class="footer-form-input" id="footer-name" name="fullname"
+                                placeholder="Entrez votre nom complet" required="" type="text" />
+                        </div>
+                        <button class="footer-submit-button" id="footer-button" type="submit">Envoyer votre
+                            demande</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 COBAN FILS. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let stateVal = 'bon';
+        function setSt(val, el) {
+            stateVal = val;
+            el.parentNode.querySelectorAll('button').forEach(b => {
+                b.style.background = '#fff';
+                b.style.color = 'inherit';
+                b.style.borderColor = '#eee';
+            });
+            el.style.background = '#FF6600';
+            el.style.color = '#fff';
+            el.style.borderColor = '#FF6600';
+        }
+
+        function calc() {
+            let s = document.getElementById('est-surface').value;
+            if (!s) return;
+            let mult = 50;
+            if (stateVal === 'moyen') mult = 75;
+            if (stateVal === 'mauvais') mult = 110;
+            let total = s * mult;
+            document.getElementById('price-val').innerText = total.toLocaleString() + '€';
+            document.getElementById('res').style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
             // Navbar Toggle
             const navToggle = document.getElementById('nav-toggle');
             const navMenu = document.getElementById('nav-menu');
-            if (navToggle && navMenu) {
+            if (navToggle) {
                 navToggle.addEventListener('click', (e) => {
                     e.stopPropagation();
                     navMenu.classList.toggle('active');
                     navToggle.classList.toggle('active');
                 });
-
-                // Mobile Dropdowns
-                const dropdowns = document.querySelectorAll('.dropdown');
-                dropdowns.forEach(dropdown => {
-                    const toggle = dropdown.querySelector('.dropdown-toggle');
-                    if (toggle) {
-                        toggle.addEventListener('click', (e) => {
-                            if (window.innerWidth <= 768) {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                dropdowns.forEach(d => { if (d !== dropdown) d.classList.remove('active'); });
-                                dropdown.classList.toggle('active');
-                            }
-                        });
-                    }
-                });
-
-                // Close on link click
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.addEventListener('click', () => {
-                        if (!link.classList.contains('dropdown-toggle') || window.innerWidth > 768) {
-                            navMenu.classList.remove('active');
-                            navToggle.classList.remove('active');
-                        }
-                    });
-                });
-
-                // Close on outside click
-                document.addEventListener('click', (e) => {
-                    if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-                        navMenu.classList.remove('active');
-                        navToggle.classList.remove('active');
-                    }
-                });
             }
 
-            // Intersection Observer for animations
+            // Mobile Dropdown Toggle
+            document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function (e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const parentDropdown = this.closest('.dropdown');
+                        document.querySelectorAll('.dropdown.active').forEach(d => {
+                            if (d !== parentDropdown) d.classList.remove('active');
+                        });
+                        parentDropdown.classList.toggle('active');
+                    }
+                });
+            });
+
+            document.querySelectorAll('.dropdown-menu a').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            });
+
+            // Intersection Observer
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
                 });
             }, { threshold: 0.1 });
+
             document.querySelectorAll('.fade-in, .scale-in').forEach(el => observer.observe(el));
-        </script>
+        });
+    </script>
 </body>
 
 </html>

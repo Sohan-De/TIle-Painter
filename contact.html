@@ -1,138 +1,213 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"
         name="viewport" />
-    <meta content="noindex, nofollow" name="robots" />
-    <title>Contact - Nuances Deco</title>
+    <meta content="index, follow" name="robots" />
+    <title>Contactez-nous | COBAN FILS - Artisan Peintre & Couvreur</title>
+    <meta name="description"
+        content="Contactez COBAN FILS pour vos projets de peinture et toiture. Devis gratuit sous 48h. Une équipe d'experts à votre écoute à Revigny-sur-Ornain et ses environs.">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
+
+    <!-- Stylesheets -->
     <link href="navbar.css" rel="stylesheet" />
     <link href="footer.css" rel="stylesheet" />
     <link href="contact.css" rel="stylesheet" />
-    <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-<div class="nav-container">
-    <div class="nav-logo">
-        <a class="logo-link" href="index.html" id="logo_text">COBAN FILS - Peinture &amp; Toiture</a>
-    </div>
-    <div class="nav-toggle" id="nav-toggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a class="logo-link" href="index.html" id="logo_text">COBAN FILS - Peinture &amp; Toiture</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
 
-    <ul class="nav-menu" id="nav-menu">
-        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-        <li class="nav-item dropdown">
-            <span class="nav-link dropdown-toggle">Peinture <i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <li><a href="peinture-interieure.html">Peinture Intérieure</a></li>
-                <li><a href="peinture-exterieure.html">Peinture Extérieure</a></li>
-                <li><a href="ravalement-facade.html">Ravalement Façade</a></li>
-                <li><a href="peinture-decorative.html">Peinture Décorative</a></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle">Peinture <i class="fas fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="peinture-interieure.html">Peinture Intérieure</a></li>
+                        <li><a href="peinture-exterieure.html">Peinture Extérieure</a></li>
+                        <li><a href="ravalement-facade.html">Ravalement Façade</a></li>
+                        <li><a href="peinture-decorative.html">Peinture Décorative</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle">Toiture <i class="fas fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="nettoyage-toiture.html">Nettoyage Toiture</a></li>
+                        <li><a href="renovation-toiture.html">Rénovation Toiture</a></li>
+                        <li><a href="hydrofuge-toiture.html">Hydrofuge Toiture</a></li>
+                        <li><a href="pose-tuiles.html">Pose de Tuiles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle">Zones d'intervention <i
+                            class="fas fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="peintre-revigny-sur-ornain.html">Revigny sur Ornain</a></li>
+                        <li><a href="peintre-bar-le-duc.html">Bar-le-Duc</a></li>
+                        <li><a href="peintre-vitry-le-francois.html">Vitry-le-François</a></li>
+                        <li><a href="peintre-saint-dizier.html">Saint-Dizier</a></li>
+                        <li><a href="peintre-falons-en-champagne.html">Châlons-en-Champagne</a></li>
+                        <li><a href="peintre-verdun.html">Verdun</a></li>
+                        <li><a href="peintre-ligny-en-barrois.html">Ligny-en-Barrois</a></li>
+                        <li><a href="peintre-commercy.html">Commercy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
-        </li>
-        <li class="nav-item dropdown">
-            <span class="nav-link dropdown-toggle">Toiture <i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <li><a href="nettoyage-toiture.html">Nettoyage Toiture</a></li>
-                <li><a href="renovation-toiture.html">Rénovation Toiture</a></li>
-                <li><a href="hydrofuge-toiture.html">Hydrofuge Toiture</a></li>
-                <li><a href="pose-tuiles.html">Pose de Tuiles</a></li>
-            </ul>
-        </li>
-        <li class="nav-item dropdown">
-            <span class="nav-link dropdown-toggle">Zones d'intervention <i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <li><a href="peintre-revigny-sur-ornain.html">Revigny sur Ornain</a></li>
-                <li><a href="peintre-bar-le-duc.html">Bar-le-Duc</a></li>
-                <li><a href="peintre-vitry-le-francois.html">Vitry-le-François</a></li>
-                <li><a href="peintre-saint-dizier.html">Saint-Dizier</a></li>
-                <li><a href="peintre-falons-en-champagne.html">Châlons-en-Champagne</a></li>
-                <li><a href="peintre-verdun.html">Verdun</a></li>
-                <li><a href="peintre-ligny-en-barrois.html">Ligny-en-Barrois</a></li>
-                <li><a href="peintre-commercy.html">Commercy</a></li>
-            </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-    </ul>
-</div></nav>
-    <section class="contact-hero">
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="contact-hero">
         <div class="contact-hero-content fade-in">
-            <h1 class="contact-hero-title" id="text_hero_title">Contactez-nous</h1>
-            <p class="contact-hero-description" id="text_hero_desc">Vous avez un projet de peinture ou de
-                décoration ? N'hésitez pas à nous contacter pour un devis gratuit.</p>
+            <span class="contact-badge">Prêt à transformer votre habitat</span>
+            <h1 class="contact-hero-title">Parlons de votre <span>Projet</span></h1>
+            <p class="contact-hero-description">Que ce soit pour une peinture d'exception ou une protection durable de
+                votre toiture, nous sommes là pour donner vie à vos envies.</p>
+        </div>
+    </header>
+
+    <!-- Info Cards Section -->
+    <section class="info-cards-section">
+        <div class="info-cards-container">
+            <div class="info-card fade-in">
+                <div class="info-card-icon"><i class="fas fa-phone-alt"></i></div>
+                <h3>Téléphone</h3>
+                <p>Appelez-nous au</p>
+                <a href="tel:0771677669">07 71 67 76 69</a>
+            </div>
+            <div class="info-card fade-in">
+                <div class="info-card-icon"><i class="fas fa-envelope"></i></div>
+                <h3>Email</h3>
+                <p>Écrivez-nous à</p>
+                <a href="mailto:votre@email.com">votre@email.com</a>
+            </div>
+            <div class="info-card fade-in">
+                <div class="info-card-icon"><i class="fas fa-clock"></i></div>
+                <h3>Horaires</h3>
+                <p>Lundi - Vendredi</p>
+                <p>08:00 - 18:00</p>
+            </div>
         </div>
     </section>
-    <section class="contact-content-section">
-        <div class="contact-content-container">
-            <div class="contact-form-wrapper slide-in-left">
+
+    <!-- Form & Side Content Section -->
+    <section class="form-section">
+        <div class="form-container">
+            <div class="form-main slide-up">
+                <div class="form-header">
+                    <span class="form-subtitle">Contact direct</span>
+                    <h2 class="form-title">Demande de Devis Gratuit</h2>
+                    <p>Remplissez le formulaire ci-dessous et recevez une estimation personnalisée sous 48 heures.</p>
+                </div>
+
                 <form class="contact-form">
-                    <div class="form-group">
-                        <label class="form-label" for="name">Nom et prénom</label>
-                        <input class="form-input" id="name" name="name" placeholder="Entrez votre nom complet"
-                            required="" type="text" />
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Nom complet</label>
+                            <input class="form-input" id="name" name="name" placeholder="Ex: Jean Martin" required
+                                type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-input" id="email" name="email" placeholder="jean.martin@email.com"
+                                required type="email" />
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label" for="phone">Téléphone</label>
-                        <input class="form-input" id="phone" name="phone" placeholder="06 00 00 00 00" type="tel" />
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Téléphone</label>
+                            <input class="form-input" id="phone" name="phone" placeholder="06 00 00 00 00" type="tel" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="project-type">Type de projet</label>
+                            <select class="form-select" id="project-type" name="project-type">
+                                <option value="peinture">Peinture Intérieure / Déco</option>
+                                <option value="ravalement">Ravalement de Façade</option>
+                                <option value="toiture">Entretien / Nettoyage Toiture</option>
+                                <option value="renovation">Rénovation Complète</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
                     </div>
+
                     <div class="form-group">
-                        <label class="form-label" for="email">Email</label>
-                        <input class="form-input" id="email" name="email" placeholder="votre.email@exemple.com"
-                            required="" type="email" />
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="message">Message</label>
+                        <label class="form-label" for="message">Votre message</label>
                         <textarea class="form-textarea" id="message" name="message"
-                            placeholder="Décrivez votre projet..." required="" rows="6"></textarea>
+                            placeholder="Décrivez votre projet en quelques mots..." required></textarea>
                     </div>
-                    <button class="contact-submit-button" type="submit">Envoyer votre message</button>
+
+                    <button class="submit-btn" type="submit">
+                        <span>Envoyer ma demande</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </form>
             </div>
-            <div class="contact-image-wrapper slide-in-right">
-                <img alt="Contact Nuances Deco" data-idx="1" id="image_1" src="image/image_1_1.jpg" />
-                <div id="context_title_1" style="display:none">Contact et Devis Rapid</div>
-                <div id="context_description_1" style="display:none">Illustration de prise de contact pour travaux de
-                    peinture et rénovation</div>
-            </div>
-        </div>
-    </section>
-    <section class="location-section">
-        <div class="location-container">
-            <div class="location-top slide-in-left">
-                <div class="location-info">
-                    <h2 class="location-title">Notre emplacement</h2>
-                    <p class="location-description">Nous sommes situés au cœur de la ville, offrant des services de
-                        peinture et décoration intérieure pour particuliers et professionnels.</p>
-                </div>
-                <div class="info-blocks">
-                    <div class="info-block">
-                        <h3 class="info-block-title">Adresse</h3>
-                        <p class="info-block-text">Revigny sur Ornain</p>
+
+            <aside class="form-side slide-up">
+                <div class="faq-card">
+                    <h3>Questions Fréquentes</h3>
+                    <div class="faq-item">
+                        <h4>Quel est le délai de réponse ?</h4>
+                        <p>Nous nous engageons à vous répondre dans un délai de 24h à 48h ouvrées.</p>
                     </div>
-                    <div class="info-block">
-                        <h3 class="info-block-title">Horaires</h3>
-                        <p class="info-block-text">Lundi à Vendredi</p>
+                    <div class="faq-item">
+                        <h4>Le devis est-il payant ?</h4>
+                        <p>Absolument pas ! Tous nos devis et déplacements pour estimation sont totalement gratuits.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Où intervenez-vous ?</h4>
+                        <p>Nous intervenons dans un rayon de 50km autour de Revigny-sur-Ornain (Meuse).</p>
                     </div>
                 </div>
-            </div>
-            <div class="location-map slide-in-right">
-                <div id="map"
-                    style="height: 400px; width: 100%; max-width: 100%; border-radius: 8px; overflow: hidden; box-sizing: border-box;">
+
+                <div class="info-card" style="text-align: left; background: var(--secondary-color); color: #ffffff;">
+                    <h3 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 20px;">Our Firm</h3>
+                    <p
+                        style="color: #ffffff; font-size: 1rem; margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-map-marker-alt"
+                            style="color: var(--primary-color); width: 25px; text-align: center;"></i>
+                        Revigny-sur-Ornain, 55800
+                    </p>
+                    <p style="color: #ffffff; font-size: 1rem; display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-user-check"
+                            style="color: var(--primary-color); width: 25px; text-align: center;"></i>
+                        Artisan certifié & Qualifié
+                    </p>
                 </div>
-            </div>
+            </aside>
         </div>
     </section>
+
+    <!-- Map Section -->
+    <section class="map-section fade-in">
+        <div id="map"></div>
+        <div class="map-overlay">
+            <h4>Notre Zone d'Expertise</h4>
+            <p>Nous sommes basés à Mornay et desservons toute la région pour vos besoins en rénovation.</p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer" id="footer-background">
         <div class="footer-container">
@@ -166,178 +241,43 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">© 2025. Tous droits réservés.</p>
+                <p class="copyright">© 2025 COBAN FILS. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
-    <!-- Mobile Sticky Buttons -->
-    <div class="mobile-sticky-bar">
-        <a class="sticky-btn call-btn" href="tel:0658740747">
-            <i class="fas fa-phone-alt"></i> Appeler
-        </a>
-        <a class="sticky-btn quote-btn" href="contact.html">
-            <i class="fas fa-file-invoice"></i> Devis Gratuit
-        </a>
-    </div>
-    <style>
-        .mobile-sticky-bar {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #f2f2f2;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 99999;
-            padding: 10px;
-            justify-content: space-between;
-            gap: 10px;
-            box-sizing: border-box;
-        }
 
-        .sticky-btn {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 15px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            gap: 8px;
-            text-align: center;
-        }
-
-        .call-btn {
-            background-color: #f8f9fa;
-            color: #0A2342;
-            border: 1px solid #e9ecef;
-        }
-
-        .quote-btn {
-            background-color: #FF6600;
-            color: #ffffff;
-            box-shadow: 0 4px 6px rgba(255, 102, 0, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            .mobile-sticky-bar {
-                display: flex;
-            }
-
-            body {
-                padding-bottom: 80px;
-            }
-        }
-    </style>
+    <!-- Scripts -->
     <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>// Configuration de l'adresse et des coordonnées
+    <script>
+        // Map Configuration
         var MAP_ADDRESS = "Mornay";
         var MAP_LATITUDE = 48.8284503;
         var MAP_LONGITUDE = 4.9870514;
 
-        // Initialisation de la carte Leaflet
-        var map = L.map('map').setView([MAP_LATITUDE, MAP_LONGITUDE], 17);
+        var map = L.map('map').setView([MAP_LATITUDE, MAP_LONGITUDE], 14);
 
-        // Ajout des tuiles OpenStreetMap
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
         }).addTo(map);
 
-        // Ajout d'un marqueur à l'adresse
-        var marker = L.marker([MAP_LATITUDE, MAP_LONGITUDE]).addTo(map);
-        marker.bindPopup('<b>Notre adresse</b><br>' + MAP_ADDRESS).openPopup();</script>
-    <script>
+        var markerIcon = L.divIcon({
+            className: 'custom-marker',
+            html: '<div style="background: #FF6600; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.3);"></div>',
+            iconSize: [20, 20]
+        });
+
+        L.marker([MAP_LATITUDE, MAP_LONGITUDE], { icon: markerIcon }).addTo(map)
+            .bindPopup('<b>COBAN FILS</b><br>' + MAP_ADDRESS).openPopup();
+
+        // Reveal Animations
         document.addEventListener('DOMContentLoaded', function () {
-            const navToggle = document.getElementById('nav-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            navToggle.addEventListener('click', function (e) {
-                e.stopPropagation();
-                navMenu.classList.toggle('active');
-                navToggle.classList.toggle('active');
-            });
-
-            // Mobile Dropdown Toggle
-            const dropdowns = document.querySelectorAll('.dropdown');
-            dropdowns.forEach(dropdown => {
-                const toggle = dropdown.querySelector('.dropdown-toggle');
-                if (toggle) {
-                    toggle.addEventListener('click', function (e) {
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            e.stopPropagation();
-
-                            // Close other dropdowns
-                            dropdowns.forEach(d => {
-                                if (d !== dropdown) d.classList.remove('active');
-                            });
-
-                            dropdown.classList.toggle('active');
-                        }
-                    });
-                }
-            });
-
-            // Close menu when clicking on a link
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    // Don't close menu if clicking on a dropdown toggle on mobile
-                    if (!link.classList.contains('dropdown-toggle') || window.innerWidth > 768) {
-                        navMenu.classList.remove('active');
-                        navToggle.classList.remove('active');
-                    }
-                });
-            });
-
-            // Close menu when clicking outside
-            document.addEventListener('click', function (e) {
-                if (navMenu.classList.contains('active') &&
-                    !navMenu.contains(e.target) &&
-                    !navToggle.contains(e.target)) {
-                    navMenu.classList.remove('active');
-                    navToggle.classList.remove('active');
-                }
-            });
-
-            // Highlight active navigation link
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            navLinks.forEach(link => {
-                const linkPage = link.getAttribute('href');
-                if (linkPage === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-
-            // Navbar scroll animation
-            const navbar = document.querySelector('.navbar');
-            let lastScrollTop = 0;
-
-            window.addEventListener('scroll', function () {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    // Scrolling down
-                    navbar.classList.add('hidden');
-                } else {
-                    // Scrolling up
-                    navbar.classList.remove('hidden');
-                }
-
-                lastScrollTop = scrollTop;
-            });
-
-            // Scroll animations
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
 
-            const observer = new IntersectionObserver(function (entries) {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
@@ -345,123 +285,28 @@
                 });
             }, observerOptions);
 
-            // Observe all animated elements
-            const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
-            animatedElements.forEach(el => {
-                observer.observe(el);
+            document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
+
+            // Navbar Interactions
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            navToggle?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+
+            // Dropdown mobile fix
+            document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        toggle.parentElement.classList.toggle('active');
+                    }
+                });
             });
         });
-
-        // Fix overflow issue after zoom/unzoom - Force recalculation
-        (function () {
-            let lastViewportWidth = window.innerWidth;
-            let lastViewportHeight = window.innerHeight;
-            let resizeTimeout;
-
-            function forceRecalculate() {
-                // Force browser to recalculate layout
-                const html = document.documentElement;
-                const body = document.body;
-
-                // Temporarily force a reflow
-                const temp = html.offsetHeight;
-
-                // Set explicit widths
-                html.style.width = '100vw';
-                html.style.maxWidth = '100vw';
-                body.style.width = '100vw';
-                body.style.maxWidth = '100vw';
-
-                // Force all sections to recalculate
-                const sections = document.querySelectorAll('section');
-                sections.forEach(section => {
-                    section.style.width = '100vw';
-                    section.style.maxWidth = '100vw';
-                });
-
-                // Force navbar
-                const navbar = document.querySelector('.navbar');
-                if (navbar) {
-                    navbar.style.width = '100vw';
-                    navbar.style.maxWidth = '100vw';
-                }
-
-                // Force footer
-                const footer = document.querySelector('.footer');
-                if (footer) {
-                    footer.style.width = '100vw';
-                    footer.style.maxWidth = '100vw';
-                }
-
-                // Force all containers
-                const containers = document.querySelectorAll('.nav-container, .contact-content-container, .location-container, .footer-container');
-                containers.forEach(container => {
-                    container.style.maxWidth = '100vw';
-                    container.style.width = '100%';
-                });
-
-                // Prevent horizontal scroll
-                html.style.overflowX = 'hidden';
-                body.style.overflowX = 'hidden';
-
-                // Force another reflow
-                const temp2 = html.offsetHeight;
-            }
-
-            function handleViewportChange() {
-                const currentWidth = window.innerWidth;
-                const currentHeight = window.innerHeight;
-
-                // Check if viewport actually changed (zoom/unzoom)
-                if (Math.abs(currentWidth - lastViewportWidth) > 1 ||
-                    Math.abs(currentHeight - lastViewportHeight) > 1) {
-
-                    clearTimeout(resizeTimeout);
-                    resizeTimeout = setTimeout(() => {
-                        forceRecalculate();
-                        lastViewportWidth = currentWidth;
-                        lastViewportHeight = currentHeight;
-                    }, 50);
-                }
-            }
-
-            // Listen for resize (includes zoom/unzoom)
-            window.addEventListener('resize', handleViewportChange, { passive: true });
-
-            // Listen for orientation change
-            window.addEventListener('orientationchange', () => {
-                setTimeout(forceRecalculate, 100);
-            });
-
-            // Listen for scroll (footer appears and triggers fix)
-            let scrollFixCount = 0;
-            window.addEventListener('scroll', () => {
-                scrollFixCount++;
-                if (scrollFixCount % 10 === 0) { // Every 10 scroll events
-                    forceRecalculate();
-                }
-            }, { passive: true });
-
-            // Initial fix
-            forceRecalculate();
-
-            // Fix after page load
-            window.addEventListener('load', () => {
-                setTimeout(forceRecalculate, 100);
-            });
-
-            // Fix on any touch interaction (might trigger zoom)
-            document.addEventListener('touchstart', () => {
-                setTimeout(forceRecalculate, 100);
-            }, { passive: true });
-
-            // Fix on visibility change (when user comes back to tab)
-            document.addEventListener('visibilitychange', () => {
-                if (!document.hidden) {
-                    setTimeout(forceRecalculate, 100);
-                }
-            });
-        })();
     </script>
 </body>
 
