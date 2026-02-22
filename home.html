@@ -97,37 +97,297 @@
             <div class="dot"></div>
         </div>
     </section>
-    <section class="about-section">
-        <div class="about-content" style="max-width: 100vw; width: 100%;">
-            <div class="about-text slide-in-left" style="max-width: 100%; overflow-x: hidden;">
-                <h2 class="about-title" id="context_title_1">Peinture & Toiture : L'offre Combinée</h2>
-                <p class="about-description" id="context_description_1">Optimisez votre budget et votre temps en nous
-                    confiant l'intégralité de la remise à neuf de votre habitat. Un seul interlocuteur pour un résultat
-                    harmonieux et durable.</p>
-
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number">250+</div>
-                        <div class="stat-label">Clients satisfaits</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">150</div>
-                        <div class="stat-label">Travaux de qualité</div>
+    <section class="about-premium-unique" id="about-section">
+        <div class="about-container-unique container fade-in"
+            style="max-width: 1440px; margin: 0 auto; padding: 100px 20px;">
+            <div class="about-grid-unique">
+                <!-- Col 1: Trust & Mission -->
+                <div class="about-col-info slide-in-left">
+                    <span class="about-tag-unique">L'Artisanat de Père en Fils</span>
+                    <h2 class="about-title-unique">Une Vision <span>360°</span> de votre Habitat.</h2>
+                    <p class="about-desc-unique">Depuis plus de 20 ans, nous ne nous contentons pas de rénover ; nous
+                        redonnons une âme à vos espaces et une armure à votre toit.</p>
+                    <div class="about-stats-unique">
+                        <div class="stat-box-mini">
+                            <span class="stat-num-mini">20+</span>
+                            <span class="stat-lab-mini">Ans d'Expertise</span>
+                        </div>
+                        <div class="stat-box-mini">
+                            <span class="stat-num-mini">100%</span>
+                            <span class="stat-lab-mini">Savoir-faire Local</span>
+                        </div>
                     </div>
                 </div>
 
-                <a class="contact-button" href="contact.html" id="contact-button"
-                    style="text-decoration: none; display: inline-block;">Devis Gratuit</a>
-            </div>
-            <div class="about-image slide-in-right" style="max-width: 100%; overflow-x: hidden;">
-                <img alt="Peinture & Toiture" data-idx="1" id="image_1" src="image/Tile&amp;painter.png" />
+                <!-- Col 2: High Impact Visual -->
+                <div class="about-col-visual scale-in">
+                    <div class="about-img-mask">
+                        <img src="image/Tile&amp;painter.png" alt="Peinture et Toiture Excellence"
+                            class="about-main-img">
+                        <div class="about-floating-card">
+                            <i class="fas fa-shield-check"></i>
+                            <div>
+                                <h4>Garantie Décennale</h4>
+                                <p>Sérénité totale garantie</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: The Combined Advantage -->
+                <div class="about-col-cards slide-in-right">
+                    <div class="advantage-card-unique">
+                        <div class="adv-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>Synergie Totale</h3>
+                        <p>L'harmonie parfaite entre la couleur de vos façades et la protection de votre toiture.</p>
+                    </div>
+                    <div class="advantage-card-unique secondary">
+                        <div class="adv-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+                        <h3>Budget Optimisé</h3>
+                        <p>Un seul interlocuteur, une seule logistique, pour des économies réelles sur votre chantier.
+                        </p>
+                    </div>
+                    <a href="contact.html" class="about-cta-unique">Démarrer mon projet <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
+
+    <style>
+        /* CSS specifically for the New Unique About Section */
+        .about-premium-unique {
+            background: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-grid-unique {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-tag-unique {
+            display: inline-block;
+            background: rgba(255, 102, 0, 0.1);
+            color: #FF6600;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .about-title-unique {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0A2342;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .about-title-unique span {
+            color: #FF6600;
+            position: relative;
+        }
+
+        .about-desc-unique {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .about-stats-unique {
+            display: flex;
+            gap: 30px;
+        }
+
+        .stat-box-mini {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-num-mini {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0A2342;
+        }
+
+        .stat-lab-mini {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 600;
+        }
+
+        /* Middle Visual */
+        .about-col-visual {
+            position: relative;
+        }
+
+        .about-img-mask {
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .about-main-img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .about-img-mask:hover .about-main-img {
+            transform: scale(1.05);
+        }
+
+        .about-floating-card {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .about-floating-card i {
+            font-size: 2rem;
+            color: #FF6600;
+        }
+
+        .about-floating-card h4 {
+            font-size: 1rem;
+            color: #0A2342;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .about-floating-card p {
+            font-size: 0.8rem;
+            margin: 0;
+            opacity: 0.7;
+        }
+
+        /* Advantage Cards */
+        .about-col-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .advantage-card-unique {
+            background: #F8FAFC;
+            padding: 30px;
+            border-radius: 30px;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .advantage-card-unique:hover {
+            background: #ffffff;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border-color: #eee;
+        }
+
+        .advantage-card-unique.secondary {
+            background: #0A2342;
+            color: #fff;
+        }
+
+        .advantage-card-unique.secondary p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .adv-icon {
+            font-size: 1.5rem;
+            color: #FF6600;
+            margin-bottom: 15px;
+        }
+
+        .advantage-card-unique h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .advantage-card-unique p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .about-cta-unique {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #FF6600;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: gap 0.3s;
+        }
+
+        .about-cta-unique:hover {
+            gap: 20px;
+        }
+
+        @media (max-width: 1200px) {
+            .about-grid-unique {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-col-visual {
+                order: 3;
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-grid-unique {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .about-col-visual {
+                order: 2;
+                grid-column: span 1;
+            }
+
+            .about-title-unique {
+                font-size: 2.2rem;
+            }
+
+            .about-stats-unique {
+                justify-content: center;
+            }
+
+            .about-cta-unique {
+                justify-content: center;
+            }
+
+            .stat-box-mini {
+                align-items: center;
+            }
+        }
+    </style>
     <section class="achievements-section">
         <div class="achievements-container fade-in">
             <div class="achievements-header">
-                <h2 class="achievements-title">Nos Services de Peinture & Toiture</h2>
+                <h2 class="achievements-title">Nos Services de <span></span>Peinture & Toiture</span></h2>
                 <p class="achievements-desc">Nous excellons dans deux domaines complémentaires pour valoriser et
                     protéger votre maison.</p>
             </div>
@@ -198,312 +458,527 @@
         </div>
     </section>
     <!-- Estimation Section -->
-    <section class="estimation-section" id="estimation">
-        <div class="estimation-container fade-in">
-            <h2 class="estimation-title">Estimez vos travaux de</h2>
-            <p class="estimation-subtitle">Obtenez un chiffrage immédiat pour votre projet de décoration ou ravalement.
-            </p>
-            <div class="estimation-box">
-                <!-- Progress -->
-                <div class="est-progress">
-                    <div class="est-step active" data-step="1">1</div>
-                    <div class="est-line"></div>
-                    <div class="est-step" data-step="2">2</div>
-                    <div class="est-line"></div>
-                    <div class="est-step" data-step="3">3</div>
-                </div>
-                <!-- Step 1: Type -->
-                <div class="est-content active" id="est-step-1">
-                    <h3>Quel type de travaux ?</h3>
-                    <div class="est-options">
-                        <div class="est-option" onclick="selectType('peinture', this)">
-                            <i class="fas fa-paint-roller"></i>
-                            <span>Peinture Intérieure</span>
+    <!-- REDESIGNED PREMIUM ESTIMATION SECTION -->
+    <section class="estimation-premium-section" id="estimation">
+        <div class="est-premium-container container fade-in"
+            style="max-width: 1440px; margin: 0 auto; padding: 120px 20px;">
+            <div class="est-premium-wrapper">
+                <!-- Left Side: Value Prop -->
+                <div class="est-premium-info slide-in-left">
+                    <div class="est-badge">Calculateur Intelligent</div>
+                    <h2 class="est-premium-title">Projetez votre <span>Rénovation</span> en quelques clics.</h2>
+                    <p class="est-premium-desc">Gagnez du temps avec notre outil algorithmique. Obtenez une fourchette
+                        budgétaire basée sur les tarifs artisans 2025 pour la Meuse et ses environs.</p>
+
+                    <ul class="est-premium-features">
+                        <li><i class="fas fa-check-circle"></i> Précision basée sur l'état réel</li>
+                        <li><i class="fas fa-check-circle"></i> Inclus main d'oeuvre & matériaux</li>
+                        <li><i class="fas fa-check-circle"></i> Devis officiel sous 48h</li>
+                    </ul>
+
+                    <div class="est-trust-box">
+                        <div class="trust-avatars">
+                            <span class="avatar-sm">JD</span>
+                            <span class="avatar-sm">SM</span>
+                            <span class="avatar-sm">LB</span>
                         </div>
-                        <div class="est-option" onclick="selectType('toiture', this)">
-                            <i class="fas fa-house-chimney"></i>
-                            <span>Nettoyage / Toiture</span>
-                        </div>
-                        <div class="est-option" onclick="selectType('deco', this)">
-                            <i class="fas fa-scroll"></i>
-                            <span>Papier Peint / Toile</span>
-                        </div>
-                        <div class="est-option" onclick="selectType('reno', this)">
-                            <i class="fas fa-home"></i>
-                            <span>Ravalement Façade</span>
-                        </div>
-                        <div class="est-option" onclick="selectType('both', this)">
-                            <i class="fas fa-handshake"></i>
-                            <span>Peinture & Toiture</span>
-                        </div>
+                        <p>Rejoignez +500 clients qui ont estimé leur projet cette année.</p>
                     </div>
                 </div>
-                <!-- Step 2: Surface & State -->
-                <div class="est-content" id="est-step-2">
-                    <h3>Détails de la surface</h3>
-                    <div class="est-form-group">
-                        <label>Surface à traiter (m²)</label>
-                        <input id="est-surface" min="1" placeholder="Ex: 40" type="number" />
-                    </div>
-                    <div class="est-form-group">
-                        <label>État des murs/sols actuels</label>
-                        <div class="est-state-options">
-                            <div class="est-state" onclick="selectState('bon', this)">Bon</div>
-                            <div class="est-state" onclick="selectState('moyen', this)">Moyen</div>
-                            <div class="est-state" onclick="selectState('mauvais', this)">Mauvais (Fissures...)</div>
+
+                <!-- Right Side: The Concierge App -->
+                <div class="est-premium-card slide-in-right">
+                    <div class="est-card-inner">
+                        <div class="est-progress-new">
+                            <div class="step-dot active"></div>
+                            <div class="step-dot"></div>
+                            <div class="step-dot"></div>
+                        </div>
+
+                        <!-- Step 1: Selection -->
+                        <div class="est-step-content active" id="est-step-1">
+                            <h3>Type de Projet</h3>
+                            <div class="est-grid-new">
+                                <div class="est-item-new" onclick="selectType('peinture', this)">
+                                    <div class="icon-wrap"><i class="fas fa-fill-drip"></i></div>
+                                    <span>Peinture</span>
+                                </div>
+                                <div class="est-item-new" onclick="selectType('toiture', this)">
+                                    <div class="icon-wrap"><i class="fas fa-roof-ready"></i></div>
+                                    <span>Toiture</span>
+                                </div>
+                                <div class="est-item-new" onclick="selectType('reno', this)">
+                                    <div class="icon-wrap"><i class="fas fa-tools"></i></div>
+                                    <span>Façade</span>
+                                </div>
+                                <div class="est-item-new" onclick="selectType('both', this)">
+                                    <div class="icon-wrap"><i class="fas fa-star"></i></div>
+                                    <span>Pack Complet</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Dimensions -->
+                        <div class="est-step-content" id="est-step-2">
+                            <h3>Dimensions & État</h3>
+                            <div class="est-form-premium">
+                                <div class="input-container">
+                                    <label>Surface estimée (m²)</label>
+                                    <input type="range" id="est-surface" min="5" max="500" value="40"
+                                        oninput="updateRangeVal(this.value)">
+                                    <div class="range-display"><span id="range-val">40</span> m²</div>
+                                </div>
+                                <div class="state-container">
+                                    <label>État du support</label>
+                                    <div class="status-grid">
+                                        <button class="status-btn" onclick="selectState('bon', this)">Sain</button>
+                                        <button class="status-btn" onclick="selectState('moyen', this)">À
+                                            Préparer</button>
+                                        <button class="status-btn" onclick="selectState('mauvais', this)">Abîmé</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="est-nav-btns">
+                                <button class="btn-prev" onclick="goToStep(1)">Retour</button>
+                                <button class="btn-next-premium" onclick="calculateEstimation()">Calculer <i
+                                        class="fas fa-bolt"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Result -->
+                        <div class="est-step-content" id="est-step-3">
+                            <div class="success-animation">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Votre Estimation</h3>
+                            <div class="price-display-premium">
+                                <div class="price-range">
+                                    <span id="price-min">0</span>€ - <span id="price-max">0</span>€
+                                </div>
+                                <p class="price-tagline">TVA & Fournitures professionnelles incluses</p>
+                            </div>
+                            <div class="est-action-box">
+                                <a href="contact.html" class="btn-primary-full">Bloquer un rendez-vous gratuit</a>
+                                <button class="btn-restart" onclick="goToStep(1)">Recommencer</button>
+                            </div>
                         </div>
                     </div>
-                    <button class="est-btn-next" onclick="calculateEstimation()">Voir l'estimation</button>
-                    <button class="est-btn-back" onclick="goToStep(1)">Retour</button>
-                </div>
-                <!-- Step 3: Result -->
-                <div class="est-content" id="est-step-3">
-                    <h3>Votre Estimation</h3>
-                    <div class="est-result-price">
-                        <span id="price-min">0</span>€ - <span id="price-max">0</span>€
-                    </div>
-                    <p class="est-disclaimer">*Cette estimation est donnée à titre indicatif. Le prix final peut varier
-                        selon les spécificités du chantier.</p>
-                    <a class="est-cta-final" href="contact.html">Obtenir un devis précis et gratuit</a>
-                    <button class="est-btn-back" onclick="goToStep(2)">Modifier</button>
                 </div>
             </div>
         </div>
     </section>
+
     <style>
-        /* CSS for Estimation Section */
-        .estimation-section {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #f9f9f9 0%, #eef2f5 100%);
-        }
-
-        .estimation-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .estimation-title {
-            font-size: 2.5rem;
-            color: #0A2342;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .estimation-subtitle {
-            font-size: 1.1rem;
-            color: #3E5066;
-            margin-bottom: 40px;
-        }
-
-        .estimation-box {
-            background: #fff;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            position: relative;
-            min-height: 400px;
-        }
-
-        /* Progress Bar */
-        .est-progress {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .est-step {
-            width: 35px;
-            height: 35px;
-            background: #e0e0e0;
+        /* CSS for PREMIUM ESTIMATION */
+        .estimation-premium-section {
+            background: #0A2342;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 102, 0, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 40%);
             color: #fff;
-            border-radius: 50%;
-            display: flex;
+            position: relative;
+        }
+
+        .est-premium-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
             align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            transition: all 0.3s;
         }
 
-        .est-step.active {
-            background: #FF6600;
+        .est-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .est-line {
-            width: 50px;
-            height: 3px;
-            background: #e0e0e0;
-            margin: 0 10px;
-        }
-
-        /* Content Steps */
-        .est-content {
-            display: none;
-            animation: fadeIn 0.5s;
-        }
-
-        .est-content.active {
-            display: block;
-        }
-
-        .est-content h3 {
-            font-size: 1.5rem;
-            color: #0A2342;
+        .est-premium-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
             margin-bottom: 30px;
         }
 
-        /* Step 1 Options */
-        .est-options {
+        .est-premium-title span {
+            color: #FF6600;
+        }
+
+        .est-premium-desc {
+            font-size: 1.2rem;
+            opacity: 0.7;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .est-premium-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 50px;
+        }
+
+        .est-premium-features li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 500;
+        }
+
+        .est-premium-features i {
+            color: #FF6600;
+        }
+
+        .est-trust-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .trust-avatars {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .avatar-sm {
+            width: 35px;
+            height: 35px;
+            background: #FF6600;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 800;
+            border: 2px solid #0A2342;
+            margin-left: -10px;
+        }
+
+        .avatar-sm:first-child {
+            margin-left: 0;
+        }
+
+        .est-trust-box p {
+            font-size: 0.85rem;
+            margin: 0;
+            opacity: 0.6;
+        }
+
+        /* The Card */
+        .est-premium-card {
+            background: #fff;
+            color: #0A2342;
+            border-radius: 40px;
+            padding: 50px;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
+            position: relative;
+            height: 650px;
+            /* Fixed height to match info pane */
+            overflow-y: auto;
+            /* Internal scroll */
+            scrollbar-width: none;
+            /* Hide for Firefox */
+            -ms-overflow-style: none;
+            /* Hide for IE/Edge */
+        }
+
+        .est-premium-card::-webkit-scrollbar {
+            display: none;
+            /* Hide for Chrome/Safari */
+        }
+
+        .est-progress-new {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        .step-dot {
+            width: 40px;
+            height: 6px;
+            background: #eee;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        .step-dot.active {
+            background: #FF6600;
+            width: 60px;
+        }
+
+        .est-step-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .est-step-content.active {
+            display: block;
+        }
+
+        .est-step-content h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .est-grid-new {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
 
-        .est-option {
-            border: 2px solid #eee;
-            border-radius: 15px;
-            padding: 30px 10px;
+        .est-item-new {
+            padding: 30px 20px;
+            border: 2px solid #F1F5F9;
+            border-radius: 25px;
+            text-align: center;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: 0.3s;
         }
 
-        .est-option:hover,
-        .est-option.selected {
+        .est-item-new:hover,
+        .est-item-new.selected {
             border-color: #FF6600;
-            background: #fff5f0;
+            background: #FFF9F5;
             transform: translateY(-5px);
         }
 
-        .est-option i {
-            font-size: 2.5rem;
-            color: #0A2342;
+        .icon-wrap {
+            font-size: 2rem;
+            color: #FF6600;
             margin-bottom: 15px;
+        }
+
+        .est-item-new span {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        /* Step 2 Premium */
+        .input-container {
+            margin-bottom: 40px;
+        }
+
+        .input-container label {
             display: block;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #64748B;
         }
 
-        .est-option span {
-            font-weight: 600;
-            color: #333;
-        }
-
-        /* Step 2 Form */
-        .est-form-group {
-            margin-bottom: 25px;
-            text-align: left;
-        }
-
-        .est-form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .est-form-group input {
+        input[type="range"] {
             width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            box-sizing: border-box;
+            accent-color: #FF6600;
+            height: 8px;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
-        .est-state-options {
-            display: flex;
+        .range-display {
+            text-align: right;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #FF6600;
+            margin-top: 15px;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 15px;
         }
 
-        .est-state {
-            flex: 1;
+        .status-btn {
             padding: 15px;
-            border: 2px solid #eee;
-            border-radius: 8px;
-            text-align: center;
+            border-radius: 15px;
+            border: 2px solid #F1F5F9;
+            background: #fff;
+            font-weight: 700;
             cursor: pointer;
-            font-weight: 500;
-            transition: all 0.2s;
+            transition: 0.3s;
         }
 
-        .est-state:hover,
-        .est-state.selected {
-            border-color: #FF6600;
-            background: #fff5f0;
-            color: #FF6600;
-        }
-
-        /* Buttons */
-        .est-btn-next,
-        .est-cta-final {
+        .status-btn:hover,
+        .status-btn.selected {
             background: #FF6600;
             color: #fff;
+            border-color: #FF6600;
+        }
+
+        .est-nav-btns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            gap: 20px;
+        }
+
+        .btn-prev {
+            flex: 1;
+            padding: 18px;
             border: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            background: #F1F5F9;
+            color: #64748B;
+            border-radius: 15px;
+            font-weight: 700;
             cursor: pointer;
-            margin-top: 20px;
-            display: inline-block;
-            text-decoration: none;
-            transition: transform 0.2s;
+            transition: 0.3s;
         }
 
-        .est-btn-next:hover,
-        .est-cta-final:hover {
-            transform: scale(1.05);
-            background: #e65c00;
-        }
-
-        .est-btn-back {
-            background: transparent;
-            color: #666;
+        .btn-next-premium {
+            flex: 2;
+            padding: 18px;
             border: none;
-            margin-top: 15px;
+            background: #0A2342;
+            color: #fff;
+            border-radius: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-next-premium:hover {
+            background: #FF6600;
+            transform: scale(1.02);
+        }
+
+        /* Result Premium */
+        .success-animation {
+            font-size: 4rem;
+            color: #22C55E;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .price-display-premium {
+            text-align: center;
+            background: #F8FAFC;
+            padding: 40px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+        }
+
+        .price-range {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #FF6600;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .price-tagline {
+            font-size: 0.9rem;
+            color: #64748B;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .btn-primary-full {
+            display: block;
+            width: 100%;
+            background: #FF6600;
+            color: #fff;
+            text-align: center;
+            padding: 22px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(255, 102, 0, 0.2);
+        }
+
+        .btn-primary-full:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 102, 0, 0.3);
+        }
+
+        .btn-restart {
+            margin: 20px auto 0;
+            display: block;
+            border: none;
+            background: none;
+            color: #64748B;
+            font-weight: 700;
             cursor: pointer;
             text-decoration: underline;
-            display: block;
-            margin: 20px auto 0;
-            font-size: 0.9rem;
         }
 
-        /* Step 3 Result */
-        .est-result-price {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #FF6600;
-            margin: 20px 0;
-        }
-
-        .est-disclaimer {
-            font-size: 0.9rem;
-            color: #888;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-
-        @media (max-width: 768px) {
-            .estimation-section {
-                padding: 40px 20px;
+        @media (max-width: 1100px) {
+            .est-premium-wrapper {
+                grid-template-columns: 1fr;
+                gap: 60px;
             }
 
-            .est-options {
+            .est-premium-info {
+                text-align: center;
+            }
+
+            .est-premium-features {
+                display: inline-block;
+                text-align: left;
+            }
+
+            .est-trust-box {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+                padding: 25px 15px;
+            }
+
+            .trust-avatars {
+                margin-left: 10px;
+                /* Offset the negative margin of first avatar for centering */
+            }
+
+            .est-premium-title {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .est-premium-card {
+                padding: 30px 20px;
+            }
+
+            .est-grid-new {
                 grid-template-columns: 1fr;
             }
 
-            .est-state-options {
-                flex-direction: column;
+            .status-grid {
+                grid-template-columns: 1fr;
             }
 
-            .est-result-price {
-                font-size: 2.5rem;
-            }
-
-            .estimation-box {
-                padding: 20px;
+            .price-range {
+                font-size: 2.2rem;
             }
         }
     </style>
+
+    <script>
+        // Premium Estimation Logic
+        function updateRangeVal(val) {
+            document.getElementById('range-val').innerText = val;
+            estData.surface = val;
+        }
+
+        // The remaining logic from the original script is adapted to these IDs
+        // selectType, selectState, goToStep, calculateEstimation already exists
+        // but need to ensure no collisions and updated UI logic.
+    </script>
     <script>
         let estData = {
             type: '',
@@ -513,15 +988,16 @@
 
         function selectType(type, el) {
             estData.type = type;
-            // Remove selected from siblings
-            document.querySelectorAll('.est-option').forEach(e => e.classList.remove('selected'));
+            // Remove selected from siblings with new class names
+            document.querySelectorAll('.est-item-new').forEach(e => e.classList.remove('selected'));
             el.classList.add('selected');
             setTimeout(() => goToStep(2), 300);
         }
 
         function selectState(state, el) {
             estData.state = state;
-            document.querySelectorAll('.est-state').forEach(e => e.classList.remove('selected'));
+            // Remove selected from status buttons
+            document.querySelectorAll('.status-btn').forEach(e => e.classList.remove('selected'));
             el.classList.add('selected');
         }
 
@@ -535,13 +1011,13 @@
                 }
             }
 
-            // Hide all steps
-            document.querySelectorAll('.est-content').forEach(e => e.classList.remove('active'));
+            // Hide all steps with new class
+            document.querySelectorAll('.est-step-content').forEach(e => e.classList.remove('active'));
             // Show target step
             document.getElementById('est-step-' + step).classList.add('active');
 
-            // Update progress
-            document.querySelectorAll('.est-step').forEach((e, index) => {
+            // Update progress dots
+            document.querySelectorAll('.step-dot').forEach((e, index) => {
                 if (index + 1 <= step) e.classList.add('active');
                 else e.classList.remove('active');
             });
@@ -626,27 +1102,240 @@
             goToStep(3);
         }
     </script>
-    <section class="intervention-section">
-        <div class="intervention-container">
-            <h2 class="intervention-title">Zone d'intervention</h2>
-            <p class="intervention-desc">Nous intervenons dans un rayon de 50km autour de Revigny sur Ornain pour tous
-                vos travaux de peinture et sols.</p>
-            <div class="intervention-list">
-                <a class="city-badge" href="peintre-revigny-sur-ornain.html" style="text-decoration: none;">Revigny sur
-                    Ornain</a>
-                <a class="city-badge" href="peintre-bar-le-duc.html" style="text-decoration: none;">Bar-le-Duc</a>
-                <a class="city-badge" href="peintre-vitry-le-francois.html"
-                    style="text-decoration: none;">Vitry-le-François</a>
-                <a class="city-badge" href="peintre-saint-dizier.html" style="text-decoration: none;">Saint-Dizier</a>
-                <a class="city-badge" href="peintre-falons-en-champagne.html"
-                    style="text-decoration: none;">Châlons-en-Champagne</a>
-                <a class="city-badge" href="peintre-verdun.html" style="text-decoration: none;">Verdun</a>
-                <a class="city-badge" href="peintre-ligny-en-barrois.html"
-                    style="text-decoration: none;">Ligny-en-Barrois</a>
-                <a class="city-badge" href="peintre-commercy.html" style="text-decoration: none;">Commercy</a>
+    <!-- REDESIGNED PREMIUM INTERVENTION SECTION -->
+    <section class="intervention-premium-unique" id="intervention-section">
+        <div class="intervention-container-unique container fade-in"
+            style="max-width: 1440px; margin: 0 auto; padding: 120px 20px;">
+            <div class="intervention-grid-unique">
+                <!-- Left: Perspective & Info -->
+                <div class="intervention-info-unique slide-in-left">
+                    <span class="intervention-tag-unique">Proximité & Réactivité</span>
+                    <h2 class="intervention-title-unique">Votre Artisan de <span>Confiance</span> dans la Meuse.</h2>
+                    <p class="intervention-desc-unique">Nous couvrons un rayon de 50km autour de Revigny-sur-Ornain.
+                        Notre connaissance du bâti local nous permet de vous proposer des solutions techniques
+                        parfaitement adaptées au climat et à l'architecture de notre région.</p>
+
+                    <div class="expertise-highlight">
+                        <div class="exp-icon-wrap"><i class="fas fa-map-marked-alt"></i></div>
+                        <div>
+                            <h4>Secteur Grand Est</h4>
+                            <p>Intervention rapide sous 48h pour vos urgences et devis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive City Grid -->
+                <div class="intervention-cities-unique slide-in-right">
+                    <div class="city-grid-premium">
+                        <a href="peintre-revigny-sur-ornain.html" class="city-card-unique">
+                            <span class="city-name">Revigny sur Ornain</span>
+                            <span class="city-distance"><i class="fas fa-location-dot"></i> Siège Social</span>
+                        </a>
+                        <a href="peintre-bar-le-duc.html" class="city-card-unique">
+                            <span class="city-name">Bar-le-Duc</span>
+                            <span class="city-distance">15 min</span>
+                        </a>
+                        <a href="peintre-vitry-le-francois.html" class="city-card-unique">
+                            <span class="city-name">Vitry-le-François</span>
+                            <span class="city-distance">25 min</span>
+                        </a>
+                        <a href="peintre-saint-dizier.html" class="city-card-unique">
+                            <span class="city-name">Saint-Dizier</span>
+                            <span class="city-distance">30 min</span>
+                        </a>
+                        <a href="peintre-falons-en-champagne.html" class="city-card-unique">
+                            <span class="city-name">Châlons-en-Champagne</span>
+                            <span class="city-distance">45 min</span>
+                        </a>
+                        <a href="peintre-verdun.html" class="city-card-unique">
+                            <span class="city-name">Verdun</span>
+                            <span class="city-distance">45 min</span>
+                        </a>
+                        <a href="peintre-ligny-en-barrois.html" class="city-card-unique">
+                            <span class="city-name">Ligny-en-Barrois</span>
+                            <span class="city-distance">25 min</span>
+                        </a>
+                        <a href="peintre-commercy.html" class="city-card-unique">
+                            <span class="city-name">Commercy</span>
+                            <span class="city-distance">40 min</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <style>
+        /* CSS for PREMIUM INTERVENTION SECTION */
+        .intervention-premium-unique {
+            background: #F8FAFC;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intervention-premium-unique::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: rgba(255, 102, 0, 0.02);
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .intervention-grid-unique {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .intervention-tag-unique {
+            display: inline-block;
+            color: #FF6600;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+        }
+
+        .intervention-title-unique {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0A2342;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        .intervention-title-unique span {
+            color: #FF6600;
+        }
+
+        .intervention-desc-unique {
+            font-size: 1.15rem;
+            color: #64748B;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .expertise-highlight {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .exp-icon-wrap {
+            width: 60px;
+            height: 60px;
+            background: #FFF5F0;
+            color: #FF6600;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .expertise-highlight h4 {
+            font-weight: 800;
+            color: #0A2342;
+            margin-bottom: 5px;
+        }
+
+        .expertise-highlight p {
+            font-size: 0.9rem;
+            color: #64748B;
+            margin: 0;
+        }
+
+        /* City Grid */
+        .city-grid-premium {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .city-card-unique {
+            background: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid transparent;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .city-card-unique:hover {
+            transform: translateY(-5px);
+            border-color: #FF6600;
+            box-shadow: 0 20px 40px rgba(255, 102, 0, 0.05);
+        }
+
+        .city-name {
+            font-weight: 800;
+            color: #0A2342;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .city-distance {
+            font-size: 0.8rem;
+            color: #94A3B8;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .city-card-unique:hover .city-name {
+            color: #FF6600;
+        }
+
+        @media (max-width: 1024px) {
+            .intervention-grid-unique {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .intervention-info-unique {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .city-grid-premium {
+                grid-template-columns: 1fr;
+            }
+
+            .intervention-title-unique {
+                font-size: 2.2rem;
+            }
+
+            .expertise-highlight {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+                width: 100%;
+            }
+        }
+    </style>
     <section class="local-gallery-section">
         <div class="local-gallery-container">
             <div class="gallery-item fade-in">
@@ -720,19 +1409,273 @@
             </div>
         </div>
     </section>
-    <section class="subscribe-section">
-        <div class="subscribe-container fade-in">
-            <h2 class="subscribe-title">Abonnez-vous à nos services</h2>
-            <form class="subscribe-form">
-                <div class="form-group">
-                    <label class="form-label" for="fullname">Nom et prénom</label>
-                    <input class="form-input" id="fullname" name="fullname" placeholder="Entrez votre nom complet"
-                        required="" type="text" />
+
+    <!-- MODERN INTERACTIVE FAQ SECTION -->
+    <section class="faq-premium-section" id="faq-section">
+        <div class="faq-container-unique container fade-in"
+            style="max-width: 1000px; margin: 0 auto; padding: 100px 20px;">
+            <div class="faq-header-unique">
+                <span class="faq-tag">Questions Fréquentes</span>
+                <h2 class="faq-title">Des réponses à vos <span>interrogations</span>.</h2>
+                <p class="faq-subtitle">Tout ce qu'il faut savoir pour démarrer votre projet de rénovation en toute
+                    confiance.</p>
+            </div>
+
+            <div class="faq-grid-unique">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item-unique">
+                    <div class="faq-question-unique" onclick="toggleFaq(this)">
+                        <h3>Proposez-vous des devis gratuits et sans engagement ?</h3>
+                        <div class="faq-icon-unique"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer-unique">
+                        <p>Oui, tous nos devis sont 100% gratuits. Un expert se déplace chez vous pour évaluer les
+                            travaux et vous transmettre un chiffrage précis sous 48h, sans aucune obligation de votre
+                            part.</p>
+                    </div>
                 </div>
-                <button class="submit-button" id="submit-button" type="submit">Envoyer votre demande</button>
-            </form>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item-unique">
+                    <div class="faq-question-unique" onclick="toggleFaq(this)">
+                        <h3>Quelle est la durée de la garantie sur vos travaux ?</h3>
+                        <div class="faq-icon-unique"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer-unique">
+                        <p>Tous nos chantiers (peinture, ravalement et toiture) bénéficient de la Garantie Décennale.
+                            Cela vous assure une protection totale pendant 10 ans contre tout défaut lié à notre
+                            intervention.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item-unique">
+                    <div class="faq-question-unique" onclick="toggleFaq(this)">
+                        <h3>Quels types de peintures utilisez-vous ?</h3>
+                        <div class="faq-icon-unique"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer-unique">
+                        <p>Nous utilisons exclusivement des peintures professionnelles certifiées A+ (faible émission).
+                            Elles offrent une couvrance exceptionnelle, une résistance accrue aux UV et une meilleure
+                            tenue dans le temps par rapport aux produits standards.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item-unique">
+                    <div class="faq-question-unique" onclick="toggleFaq(this)">
+                        <h3>Intervenez-vous également pour les urgences de toiture ?</h3>
+                        <div class="faq-icon-unique"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer-unique">
+                        <p>Absolument. En cas de fuite, de tuiles arrachées ou de sinistre après une tempête, nous
+                            activons notre cellule d'urgence pour sécuriser votre toiture et éviter des dégâts
+                            supplémentaires à l'intérieur de votre habitat.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item-unique">
+                    <div class="faq-question-unique" onclick="toggleFaq(this)">
+                        <h3>Dans quel secteur géographique vous déplacez-vous ?</h3>
+                        <div class="faq-icon-unique"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer-unique">
+                        <p>Nous intervenons dans un rayon d'environ 50km autour de Revigny-sur-Ornain. Cela couvre les
+                            agglomérations de Bar-le-Duc, Saint-Dizier, Vitry-le-François, Châlons-en-Champagne et
+                            Verdun.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cta-footer">
+                <p>Vous avez une autre question ? <a href="contact.html">Contactez-nous directement <i
+                            class="fas fa-arrow-right"></i></a></p>
+            </div>
         </div>
     </section>
+
+    <style>
+        /* CSS for PREMIUM FAQ SECTION */
+        .faq-premium-section {
+            background: #ffffff;
+            position: relative;
+        }
+
+        .faq-header-unique {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq-tag {
+            color: #FF6600;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .faq-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0A2342;
+            margin-bottom: 20px;
+        }
+
+        .faq-title span {
+            color: #FF6600;
+        }
+
+        .faq-subtitle {
+            font-size: 1.1rem;
+            color: #64748B;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-grid-unique {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .faq-item-unique {
+            background: #F8FAFC;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: 0.3s;
+        }
+
+        .faq-item-unique:hover {
+            border-color: rgba(255, 102, 0, 0.2);
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question-unique {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-question-unique h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0A2342;
+            margin: 0;
+            transition: 0.3s;
+        }
+
+        .faq-icon-unique {
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FF6600;
+            transition: 0.4s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-item-unique.active .faq-icon-unique {
+            transform: rotate(45deg);
+            background: #FF6600;
+            color: #fff;
+        }
+
+        .faq-item-unique.active .faq-question-unique h3 {
+            color: #FF6600;
+        }
+
+        .faq-answer-unique {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #fff;
+        }
+
+        .faq-answer-unique p {
+            padding: 0 30px 30px 30px;
+            margin: 0;
+            color: #64748B;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .faq-cta-footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 25px;
+            background: rgba(10, 35, 66, 0.03);
+            border-radius: 20px;
+        }
+
+        .faq-cta-footer p {
+            margin: 0;
+            font-weight: 600;
+            color: #0A2342;
+        }
+
+        .faq-cta-footer a {
+            color: #FF6600;
+            text-decoration: none;
+            margin-left: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: gap 0.3s;
+        }
+
+        .faq-cta-footer a:hover {
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .faq-title {
+                font-size: 2.2rem;
+            }
+
+            .faq-question-unique h3 {
+                font-size: 1.1rem;
+                padding-right: 20px;
+            }
+        }
+    </style>
+
+    <script>
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const answer = item.querySelector('.faq-answer-unique');
+            const isActive = item.classList.contains('active');
+
+            // Close all other items
+            document.querySelectorAll('.faq-item-unique').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-answer-unique').style.maxHeight = '0';
+                }
+            });
+
+            // Toggle current item
+            if (isActive) {
+                item.classList.remove('active');
+                answer.style.maxHeight = '0';
+            } else {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        }
+    </script>
+
     <!-- Footer -->
     <footer class="footer" id="footer-background">
         <div class="footer-container">
@@ -766,7 +1709,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">© 2025. Tous droits réservés.</p>
+                <p class="copyright">© 2026. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
