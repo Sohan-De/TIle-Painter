@@ -1,3 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /
 
+# Help search engines find all your city and blog pages
+# Sitemap: https://votre-domaine.fr/sitemap.xml

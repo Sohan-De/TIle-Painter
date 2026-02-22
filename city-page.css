@@ -6,7 +6,7 @@
 .city-hero {
     height: 75vh;
     min-height: 600px;
-    background: linear-gradient(rgba(10, 35, 66, 0.7), rgba(10, 35, 66, 0.7)), url('image/hero.jpg');
+    background: linear-gradient(rgba(10, 35, 66, 0.7), rgba(10, 35, 66, 0.7)), url('image/hero.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
